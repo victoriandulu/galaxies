@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Software Company</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <i id="menuIcon" class="fas fa-bars nav-toggle" onclick="toggleSidebar()"></i>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html">Our Projects</a></li>
+                <li><a href="partners.html">Our Partners</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sidebar for small screens -->
+    <div id="sidebar" class="sidebar">
+        <a href="index.html" onclick="toggleSidebar()">Home</a>
+        <a href="about.html" onclick="toggleSidebar()">About Us</a>
+        <a href="projects.html" onclick="toggleSidebar()">Our Projects</a>
+        <a href="partners.html" onclick="toggleSidebar()">Our Partners</a>
+        <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
+    </div>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have any questions? Reach out to us, and we’ll get back to you shortly!</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Software Company. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to toggle the sidebar visibility
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            const menuIcon = document.getElementById("menuIcon");
+            
+            sidebar.classList.toggle("active");
+            
+            // Toggle the hamburger and close icon
+            menuIcon.classList.toggle("fa-bars");
+            menuIcon.classList.toggle("fa-times");
+        }
+    </script>
+</body>
+</html>

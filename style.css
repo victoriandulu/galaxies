@@ -1,0 +1,225 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    color: black;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Hamburger icon styles */
+.nav-toggle {
+    display: none; /* Hidden by default */
+    font-size: 1.5em;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+/* Sidebar styles for small screens */
+.sidebar {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 60px; /* Adjusted for header height */
+    left: 0;
+    width: 45%;
+    height: 100%;
+    background-color: #4CAF50;
+    color: white;
+    flex-direction: column;
+    padding: 20px 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+/* Sidebar visible when active */
+.sidebar.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.sidebar a:hover {
+    color: #d4f7dc;
+}
+
+/* Media Queries */
+
+/* Large screens: hide the hamburger and show nav links */
+@media (min-width: 769px) {
+    .nav-toggle {
+        display: none !important;/* Hide the hamburger icon */
+    }
+
+    nav ul {
+        display: flex; /* Show nav links horizontally */
+    }
+}
+
+/* Small screens: show the hamburger and hide nav links */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block; /* Show the hamburger icon */
+    }
+
+    nav ul {
+        display: none; /* Hide nav links */
+    }
+}
+
+/* Home Section */
+#home {
+    color: white;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px; /* Add padding to prevent the header from overlapping */
+}
+
+/* Video Background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Content inside Home */
+#home .content {
+    z-index: 1;
+}
+
+#home h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 1.5em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+/* Styles for small screens */
+@media (max-width: 768px) {
+    #home {
+        height: 60vh; /* Reduce the height for smaller screens */
+        padding-top: 50px; /* Adjust padding to prevent header overlap */
+    }
+
+    #home h1 {
+        font-size: 2.5em; /* Decrease the font size */
+        margin-bottom: 15px; /* Reduce the bottom margin */
+    }
+
+    #home p {
+        font-size: 1.2em; /* Reduce the font size for the paragraph */
+        max-width: 90%; /* Adjust the max width for better readability */
+    }
+
+    .video-background video {
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* About, Projects, Partners, Contact */
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Form */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
