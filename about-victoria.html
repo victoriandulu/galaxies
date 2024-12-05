@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects | Software Company</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background: url('background.jpeg') no-repeat center center/cover;
+            color: white;
+            min-height: 100vh;
+            padding: 120px 20px;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden; /* Prevent horizontal overflow */
+        }
+
+        #content-area {
+            display: flex;
+            flex-direction: row; /* Default to row layout on larger screens */
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            flex-grow: 1; /* Ensures the content area expands to take available space */
+        }
+
+        #victoria-content {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+        }
+
+        #victoria-image {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            object-fit: contain;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto; /* Allow scrolling vertically */
+        }
+
+        footer {
+            
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+
+        }
+
+        /* Media Query for Small Screens */
+        @media (max-width: 768px) {
+            body {
+                height: auto; /* Adjust to let content expand naturally */
+                padding: 80px 30px; /* Adjust padding for smaller screens */
+                box-sizing: border-box; /* Include padding in the element's total width and height */
+            }
+
+            #content-area {
+                display: flex;
+                flex-direction: column; /* Stack the content below the image */
+                align-items: center; /* Center content horizontally */
+                padding: 10px;
+                margin-bottom: 80px; /* Add space at the bottom to prevent content from being hidden by the footer */
+            }
+
+            #victoria-content {
+                width: 90%; /* Adjust width for smaller screens */
+                padding: 15px; /* Reduce padding for better fit */
+            }
+
+            #victoria-image {
+                max-width: 100%; /* Make image fully responsive */
+                margin-bottom: 20px; /* Add space below the image */
+            }
+
+            footer {
+                position: relative;
+                padding: 15px 20px; /* Adjust padding for better spacing */
+                background: #333; /* Set footer background color */
+                color: white; /* Footer text color */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <i id="menuIcon" class="fas fa-bars nav-toggle" onclick="toggleSidebar()"></i>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html">Our Projects</a></li>
+                <li><a href="partners.html">Our Partners</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sidebar for small screens -->
+    <div id="sidebar" class="sidebar">
+        <a href="index.html" onclick="toggleSidebar()">Home</a>
+        <a href="about.html" onclick="toggleSidebar()">About Us</a>
+        <a href="projects.html" onclick="toggleSidebar()">Our Projects</a>
+        <a href="partners.html" onclick="toggleSidebar()">Our Partners</a>
+        <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
+    </div>
+
+    <!-- About Victoria Section -->
+    <div id="content-area">
+        <!-- Image -->
+        <img id="victoria-image" src="victoria-milly.png" alt="Victoria">
+
+        <!-- Card Content -->
+        <div id="victoria-content">
+            <h1>About Victoria</h1>
+            <p id="victoria-description">
+                TTTTTThis is the content about Victoria. Here, you can provide more details about her background,
+                This is the content about Victoria. Here, you can provide more details about her background,
+                This is the content about Victoria. Here, you can provide more details about her background,
+                
+                This is the content about Victoria. Here, you can provide more details about her background, career, and experience. This page will offer an in-depth explanation of who Victoria is, highlighting her skills, projects, and accomplishments.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Software Company. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to toggle the sidebar visibility
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            const menuIcon = document.getElementById("menuIcon");
+            
+            sidebar.classList.toggle("active");
+            
+            // Toggle the hamburger and close icon
+            menuIcon.classList.toggle("fa-bars");
+            menuIcon.classList.toggle("fa-times");
+        }
+    </script>
+</body>
+</html>

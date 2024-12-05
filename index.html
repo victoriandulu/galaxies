@@ -19,10 +19,10 @@
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
+        
     </header>
-
-    <!-- Sidebar for small screens -->
-    <div id="sidebar" class="sidebar">
+      <!-- Sidebar for small screens -->
+      <div id="sidebar" class="sidebar">
         <a href="index.html" onclick="toggleSidebar()">Home</a>
         <a href="about.html" onclick="toggleSidebar()">About Us</a>
         <a href="projects.html" onclick="toggleSidebar()">Our Projects</a>
@@ -38,9 +38,65 @@
                 Your browser does not support the video tag.
             </video>
         </div>
-        <div class="content">
-            <h1>GalaxiesCoders</h1>
-            <p>Innovating the Future, One Line of Code at a Time</p>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <div class="card-container">
+                        <div class="image-card">
+                            <img src="vicky.png" alt="Image 1">
+                        </div>
+                        <div class="content-card">
+                            <h2>Software Engineer, KCA University</h2>
+                            <h2></h2>
+                            <p>As a Software Engineer, I have honed my technical skills and problem-solving abilities through my education at KCA University, where I pursued a degree in Software Development.</p>
+                            <a href="about-victoria.html">
+                                <button class="learn-more">Learn More</button>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card-container">
+                        <div class="image-card">
+                            <img src="john.png" alt="Image 2">
+                        </div>
+                        <div class="content-card">
+                            <h2>Empowering Businesses, KCA University</h2>
+                            
+                         <p>Delivering software that drives business growth.
+                            Delivering software that drives business growth.
+                            Delivering software that drives business growth.
+                            Delivering software that drives business growth.</p>
+                            <button class="learn-more">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card-container">
+                        <div class="image-card">
+                            <img src="mercy.png" alt="Image 3">
+                        </div>
+                        <div class="content-card">
+                            <h2>Shaping the Future</h2>
+                            <p>Innovating for the challenges of tomorrow.</p>
+                            <button class="learn-more">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card-container">
+                        <div class="image-card">
+                            <img src="image4.jpg" alt="Image 4">
+                        </div>
+                        <div class="content-card">
+                            <h2>Building Connections</h2>
+                            <p>Connecting people through technology.</p>
+                            <button class="learn-more">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -49,10 +105,8 @@
         <p>&copy; 2024 Software Company. All Rights Reserved.</p>
     </footer>
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-        // Function to toggle the sidebar visibility
-        function toggleSidebar() {
+         function toggleSidebar() {
             const sidebar = document.getElementById("sidebar");
             const menuIcon = document.getElementById("menuIcon");
             
@@ -62,6 +116,22 @@
             menuIcon.classList.toggle("fa-bars");
             menuIcon.classList.toggle("fa-times");
         }
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const slider = document.querySelector('.slider');
+
+        function showNextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        setInterval(showNextSlide, 4000); // Change slide every 4 seconds
+
+        function openLearnMorePage() {
+    // Hide any other content (if you want to remove old content)
+    document.getElementById('learn-more-page').style.display = 'block';
+}
+
     </script>
 </body>
 </html>

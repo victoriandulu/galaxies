@@ -8,16 +8,17 @@
 body {
     font-family: Arial, sans-serif;
 }
-
 header {
-    background-color: white;
     padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 100;
-    color: black;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: none; /* Optional: Remove any shadow if previously applied */
 }
+
 
 nav ul {
     list-style: none;
@@ -30,7 +31,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
@@ -58,13 +59,14 @@ nav ul li a:hover {
     left: 0;
     width: 45%;
     height: 100%;
-    background-color: #4CAF50;
+    background: rgba(255, 255, 255, 0.1);
     color: white;
     flex-direction: column;
     padding: 20px 0;
     z-index: 1000;
     text-align: center;
 }
+
 
 /* Sidebar visible when active */
 .sidebar.active {
@@ -111,15 +113,18 @@ nav ul li a:hover {
 #home {
     color: white;
     position: relative;
-    height: 100vh;
+    min-height: 100vh; /* Adjusted from 100vh to min-height to allow scrolling */
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 60px; /* Add padding to prevent the header from overlapping */
+    
+    padding-bottom: 60px; 
 }
-
+#home .content {
+    z-index: 1;
+}
 /* Video Background */
 .video-background {
     position: absolute;
@@ -155,8 +160,8 @@ nav ul li a:hover {
 /* Styles for small screens */
 @media (max-width: 768px) {
     #home {
-        height: 60vh; /* Reduce the height for smaller screens */
-        padding-top: 50px; /* Adjust padding to prevent header overlap */
+        height: auto; /* Remove fixed height to allow scrolling */
+        padding: 0 20px
     }
 
     #home h1 {
@@ -222,4 +227,327 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Form */
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+/* Small screens: center text, adjust padding for footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+}
+/* Small screens: video background adjustments */
+@media (max-width: 768px) {
+    .video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* Ensure full height of the viewport */
+        z-index: -1;
+        overflow: hidden; /* Prevent any overflow issues */
+    }
+
+    .video-background video {
+        width: 100%; /* Full width of the parent container */
+        height: 100%; /* Full height of the parent container */
+        object-fit: cover; /* Ensure video scales and covers the entire area */
+        object-position: center; /* Center the video within the viewport */
+    }
+
+    #home {
+        height: 100vh; /* Match the viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0; /* Remove padding for a seamless full-height effect */
+    }
+
+    #home .content {
+        z-index: 1;
+        padding: 20px; /* Add padding for better text readability */
+    }
+
+    #home h1 {
+        font-size: 1.8em; /* Adjust font size for smaller screens */
+        margin-bottom: 15px;
+    }
+
+    #home p {
+        font-size: 1em; /* Adjust font size for readability */
+        max-width: 90%;
+    }
+}/* Slider Section */
+#slider-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Slider Container */
+.slider-container {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-direction: column; /* Stack image and content vertically */
+    align-items: center;
+    justify-content: flex-start; /* Ensure items are aligned from the top */
+    width: 100%;
+    padding: 10px; /* Reduced padding further from 30px to 20px */
+    object-fit: contain;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    min-height: 100vh; /* Ensure the container takes up full height of the viewport */
+}
+
+/* Image Card */
+.image-card img {
+    width: 100%; /* Ensure the image spans the container */
+    max-width: 400px; /* Optional: Set a max width for smaller images */
+    height: auto;
+    justify-content: flex-start;
+    margin-top: 20px; /* Reduced margin-top from 40px to 20px */
+    border-radius: 10px;
+    object-fit: contain; /* Preserve aspect ratio */
+    margin-bottom: 15px; /* Add some space below the image */
+}
+
+/* Content Card */
+.content-card {
+    object-fit: contain;
+    display: flex;
+
+    margin-top: 20px; /* Reduced margin-top from 40px to 20px */
+    flex-direction: column; /* Ensure content is stacked vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: flex-start; /* Align items from the top */
+    gap: 20px; /* Add space between elements */
+    max-width: 1200px; /* Maximum width */
+    width: 90%; /* Make the card width responsive */
+    margin: auto; /* Center the card */
+    padding: 20px; /* Padding around the content */
+    flex-grow: 1; /* Ensure the content area expands to take available space */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add some shadow for visual appeal */
+    color: white; /* Set text color to white */
+    min-height: 300px; /* Set a minimum height to ensure it looks balanced */
+}
+
+/* Heading style */
+.content-card h2 {
+    margin: 0 0 10px;
+    font-size: 1.5rem; /* Adjust font size */
+    text-align: center; /* Center the headings */
+}
+
+/* Paragraph style */
+.content-card p {
+    background: rgba(255, 255, 255, 0.1); /* Background for the paragraph */
+    padding: 20px; /* Padding around text */
+    font-size: 1rem; /* Adjust font size */
+    line-height: 1.5; /* Add line spacing for readability */
+}
+
+/* Button style */
+.content-card button {
+    padding: 10px 20px;
+    border: none;
+    background: #333;
+    color: #fff;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto; /* Let the button adjust to its content width */
+    margin-top: 15px; /* Add some space above the button */
+}
+
+/* Hover effect for button */
+.content-card button:hover {
+    background: #555;
+}
+
+/* Slide */
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content */
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.slide img {
+    width: 80%; /* Increase image width */
+    height: auto;
+    max-height: 70vh; /* Restrict the height to prevent overflow */
+    border-radius: 10px;
+    object-fit: contain; /* Maintain aspect ratio */
+    margin-right: 20px;
+}
+
+.slide-content {
+    text-align: left;
+    max-width: 40%;
+}
+
+.slide-content h2 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+    color: white;
+}
+
+.slide-content p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Media Query for Small Screens (max-width: 768px) */
+@media (max-width: 768px) {
+
+    /* Card Container */
+    .card-container {
+        flex-direction: column; /* Stack image and content vertically */
+        padding: 15px; /* Adjust padding for small screens */
+        gap: 15px; /* Add gap between items */
+        min-height: auto; /* Remove min-height for smaller screens */
+    }
+
+    /* Image Card */
+    .image-card img {
+        width: 100%; /* Make image responsive */
+        height: auto;
+        margin-top: 10px; /* Adjust top margin */
+        max-width: 100%; /* Ensure the image fills the container */
+        object-fit: contain;
+        margin-bottom: 10px; /* Reduce bottom margin */
+    }
+
+    /* Content Card */
+    .content-card {
+        width: 100%; /* Make content card full width */
+        padding: 15px; /* Reduce padding for better fit */
+        background: rgba(255, 255, 255, 0.2); /* Adjust background opacity */
+        box-shadow: none; /* Remove box shadow */
+        min-height: auto; /* Remove minimum height for better fit */
+        color: white;
+    }
+
+    .content-card h2 {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        text-align: center;
+    }
+
+    .content-card p {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        line-height: 1.4;
+    }
+
+    /* Button style */
+    .content-card button {
+        width: 100%; /* Make the button full width */
+        padding: 12px;
+        font-size: 1rem; /* Adjust font size for better fit */
+    }
+
+    /* Hover effect for button */
+    .content-card button:hover {
+        background: #444; /* Change hover background color */
+    }
+
+    /* Slide */
+    .slide {
+        flex-direction: column; /* Stack image and text vertically */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .slide img {
+        width: 100%; /* Make image fully responsive */
+        height: auto;
+        max-height: 50vh; /* Adjust max height for small screens */
+        margin-bottom: 15px; /* Add margin below the image */
+    }
+
+    .slide-content {
+        text-align: center; /* Center-align text on small screens */
+        max-width: 100%; /* Use full width */
+    }
+
+    .slide-content h2 {
+        font-size: 1.6rem; /* Adjust heading font size */
+    }
+
+    .slide-content p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
 }
