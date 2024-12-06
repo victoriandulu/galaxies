@@ -33,71 +33,17 @@
     <!-- Home Section with background video -->
     <section id="home">
         <div class="video-background">
-            <video autoplay muted loop>
+            <video autoplay loop muted>
                 <source src="universal-video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+            <audio id="background-audio" loop>
+                <source src="about.mp3" type="audio/mp3">
+                Your browser does not support the audio tag.
+            </audio>
         </div>
-        <div class="slider-container">
-            <div class="slider">
-                <div class="slide">
-                    <div class="card-container">
-                        <div class="image-card">
-                            <img src="vicky.png" alt="Image 1">
-                        </div>
-                        <div class="content-card">
-                            <h2>Software Engineer, KCA University</h2>
-                            <h2></h2>
-                            <p>As a Software Engineer, I have honed my technical skills and problem-solving abilities through my education at KCA University, where I pursued a degree in Software Development.</p>
-                            <a href="about-victoria.html">
-                                <button class="learn-more">Learn More</button>
-                            </a>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="card-container">
-                        <div class="image-card">
-                            <img src="john.png" alt="Image 2">
-                        </div>
-                        <div class="content-card">
-                            <h2>Empowering Businesses, KCA University</h2>
-                            
-                         <p>Delivering software that drives business growth.
-                            Delivering software that drives business growth.
-                            Delivering software that drives business growth.
-                            Delivering software that drives business growth.</p>
-                            <button class="learn-more">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="card-container">
-                        <div class="image-card">
-                            <img src="mercy.png" alt="Image 3">
-                        </div>
-                        <div class="content-card">
-                            <h2>Shaping the Future</h2>
-                            <p>Innovating for the challenges of tomorrow.</p>
-                            <button class="learn-more">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="card-container">
-                        <div class="image-card">
-                            <img src="image4.jpg" alt="Image 4">
-                        </div>
-                        <div class="content-card">
-                            <h2>Building Connections</h2>
-                            <p>Connecting people through technology.</p>
-                            <button class="learn-more">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
+        
     </section>
         <!-- Our Champions Section -->
         <section id="champions">
@@ -153,6 +99,24 @@
     // Hide any other content (if you want to remove old content)
     document.getElementById('learn-more-page').style.display = 'block';
 }
+
+
+window.onscroll = function() {
+        var header = document.querySelector("header");
+        if (window.scrollY > 0) {  // When scroll position is greater than 0
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    };
+
+    document.addEventListener('click', function () {
+    const audio = document.getElementById('background-audio');
+    if (audio.paused) {
+        audio.play();
+    }
+});
+
 
     </script>
 </body>

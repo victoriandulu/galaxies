@@ -30,15 +30,32 @@
         <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
     </div>
 
+    <!-- Explanation Section (Blue Background) -->
+    <section id="explanation">
+        <div class="content">
+            <h2>Get In Touch With Us</h2>
+            
+        </div>
+    </section>
+    
     <!-- Contact Us Section -->
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Have any questions? Reach out to us, and we’ll get back to you shortly!</p>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+        <p>If you'd like to get in touch, please fill out the form below:</p>
+        <form class="contact-form" id="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
         </form>
     </section>
 
@@ -46,6 +63,8 @@
     <footer>
         <p>&copy; 2024 Software Company. All Rights Reserved.</p>
     </footer>
+      <!-- EmailJS Integration -->
+      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <script>
         // Function to toggle the sidebar visibility
@@ -59,6 +78,36 @@
             menuIcon.classList.toggle("fa-bars");
             menuIcon.classList.toggle("fa-times");
         }
+        (function(){
+            emailjs.init("PLlXKBc-lreGCE27Q"); // replace with your actual user ID
+        })();
+        
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            const templateParams = {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            emailjs.send('service_mgyimiy', 'template_eirf7kw', templateParams)
+                .then(function(response) {
+                    alert('Message sent successfully!');
+                    document.getElementById('contact-form').reset(); // Reset the form after submission
+                }, function(error) {
+                    alert('Error sending message: ', error);
+                });
+        });
+        window.onscroll = function() {
+        var header = document.querySelector("header");
+        if (window.scrollY > 0) {  // When scroll position is greater than 0
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    };
+    
     </script>
 </body>
 </html>

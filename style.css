@@ -8,16 +8,36 @@
 body {
     font-family: Arial, sans-serif;
 }
+/* Initial header style */
 header {
     padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 100;
-    color: white;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: none; /* Optional: Remove any shadow if previously applied */
+    color: white; /* Default text color */
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    box-shadow: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
+
+/* When the user scrolls */
+header.scrolled {
+    background-color: white; /* White background when scrolled */
+    color: black; /* Text color changes to black */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow after scrolling */
+}
+
+/* Make sure the links inside the header also change color */
+header.scrolled a {
+    color: black; /* Link color changes to black when scrolled */
+}
+
+/* Optional: Change the color of the menu icon if needed */
+header.scrolled .nav-toggle {
+    color: black; /* Change hamburger menu icon color to black */
+}
+
 
 
 nav ul {
@@ -219,6 +239,138 @@ form button {
 
 form button:hover {
     background-color: blue;
+}
+/* Explanation Section */
+/* Explanation Section */
+#explanation {
+    background-color: #000033; /* Dark blue background color */
+    background-image: url('in-touch.png'); /* Add the path to your image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed as the user scrolls */
+    color: white;
+    padding: 60px 20px; /* Adjusted padding to accommodate the background */
+    height: 80vh; /* Set the height to 80% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: start; /* Align text to the left */
+    padding-left: 40px; /* Adds padding to the left for text */
+    width: 100%; /* Ensures the section spans the full width */
+}
+
+#explanation .content {
+    max-width: 800px; /* Optional: To limit the width of the content */
+    text-align: start; /* Ensures left-alignment of text */
+    width: 100%; /* Ensures the content takes full available width */
+}
+
+#explanation h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: start;
+    font-weight: bold;
+    color: white; /* Ensures the text color for h2 is white */
+}
+
+#explanation p {
+    font-size: 1.2em;
+    margin-top: 5px;
+    line-height: 1.6;
+    opacity: 0.9;
+    color: white; /* Ensures the text color for p is white */
+    max-width: 600px; /* Optional: Limiting the width of the paragraph for better readability */
+}
+
+
+
+/* Contact Form Section */
+#contact {
+    padding: 30px 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 600px; /* Reduced size */
+    margin: 30px auto;
+}
+
+/* Contact Section Title */
+#contact h2 {
+    font-size: 2.2em;
+    color: #000033;
+    margin-bottom: 20px;
+}
+
+/* Contact Section Paragraph */
+#contact p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    transition: box-shadow 0.3s ease;
+    background-color: #f3f4f6;
+    width: 100%;
+}
+
+/* Input Fields */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(60, 178, 148, 0.5);
+    border: 1px solid #3b6b61;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #000033;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 200px; /* Button size */
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #2a2a72;
 }
 
 /* Footer Styles */
@@ -645,5 +797,129 @@ footer {
 
     .champion-card {
         width: 90%; /* Full width on smaller screens */
+    }
+}
+
+
+/* About Us Section */
+/* About Us Section */
+#about {
+    background-color: #000033; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+    height: 80vh; /* Set the height to 80% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#about h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#about p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* Mission and Vision Section Styling */
+#mission, #vision {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+#mission h2, #vision h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #000033; /* Dark Blue accent */
+}
+
+#mission p, #vision p {
+    font-size: 1.2em;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Team Section Styling */
+#team {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+#team h2 {
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.team-member {
+    display: inline-block;
+    width: 30%;
+    margin: 0 15px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 2.2em;
+    }
+
+    #about p {
+        font-size: 1em;
+    }
+
+    #mission h2, #vision h2 {
+        font-size: 2.2em;
+    }
+
+    #mission p, #vision p {
+        font-size: 1em;
+    }
+
+    .team-member {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .team-member img {
+        width: 120px;
+        height: 120px;
     }
 }

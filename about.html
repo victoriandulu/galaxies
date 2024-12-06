@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Software Company</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
@@ -21,19 +20,42 @@
         </nav>
     </header>
 
-    <!-- Sidebar for small screens -->
-    <div id="sidebar" class="sidebar">
-        <a href="index.html" onclick="toggleSidebar()">Home</a>
-        <a href="about.html" onclick="toggleSidebar()">About Us</a>
-        <a href="projects.html" onclick="toggleSidebar()">Our Projects</a>
-        <a href="partners.html" onclick="toggleSidebar()">Our Partners</a>
-        <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
-    </div>
-
     <!-- About Us Section -->
     <section id="about">
         <h2>About Us</h2>
-        <p>We are a leading software company focused on delivering innovative solutions to our clients. Our team is dedicated to providing the highest quality software development services.</p>
+        <p>Founded in 2019, we are a group of passionate young software developers committed to providing innovative solutions to the tech industry. Our mission is to create opportunities for talented individuals and mentor the next generation of tech leaders.</p>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission">
+        <h2>Mission</h2>
+        <p>To empower young developers by providing them with opportunities to grow and learn, while creating innovative software solutions that address real-world challenges.</p>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision">
+        <h2>Vision</h2>
+        <p>To become a leading technology company that nurtures young talent and fosters creativity and innovation in the software development field.</p>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+            <img src="team1.jpg" alt="Team Member 1">
+            <h3>John Doe</h3>
+            <p>CEO & Founder</p>
+        </div>
+        <div class="team-member">
+            <img src="team2.jpg" alt="Team Member 2">
+            <h3>Jane Smith</h3>
+            <p>Lead Developer</p>
+        </div>
+        <div class="team-member">
+            <img src="team3.jpg" alt="Team Member 3">
+            <h3>Mike Johnson</h3>
+            <p>Project Manager</p>
+        </div>
     </section>
 
     <!-- Footer Section -->
@@ -42,17 +64,24 @@
     </footer>
 
     <script>
-        // Function to toggle the sidebar visibility
         function toggleSidebar() {
             const sidebar = document.getElementById("sidebar");
             const menuIcon = document.getElementById("menuIcon");
             
             sidebar.classList.toggle("active");
-            
-            // Toggle the hamburger and close icon
             menuIcon.classList.toggle("fa-bars");
             menuIcon.classList.toggle("fa-times");
         }
+
+        window.onscroll = function() {
+        var header = document.querySelector("header");
+        if (window.scrollY > 0) {  // When scroll position is greater than 0
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    };
+    
     </script>
 </body>
 </html>
