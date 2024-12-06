@@ -580,3 +580,68 @@ footer {
         padding: 15px; /* Adjust padding for touch screens */
     }
 }
+
+/* Our Champions Section */
+#champions {
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Light gray background */
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333; /* Dark text color */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.champion-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+}
+
+.champion-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px; /* Fixed card width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.champion-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.champion-card img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.champion-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007BFF; /* Bright blue */
+}
+
+.champion-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .champion-container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+    }
+
+    .champion-card {
+        width: 90%; /* Full width on smaller screens */
+    }
+}
