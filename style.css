@@ -209,7 +209,7 @@ form input, form textarea {
 }
 
 form button {
-    background-color: #4CAF50;
+    background-color: blue;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -218,7 +218,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #45a049;
+    background-color: blue;
 }
 
 /* Footer Styles */
@@ -257,7 +257,7 @@ form textarea {
 }
 
 form button {
-    background-color: #4CAF50;
+    background-color: blue;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -266,7 +266,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #45a049;
+    background-color: blue;
 }
 
 /* Footer Styles */
@@ -376,7 +376,7 @@ footer {
     max-width: 400px; /* Optional: Set a max width for smaller images */
     height: auto;
     justify-content: flex-start;
-    margin-top: 20px; /* Reduced margin-top from 40px to 20px */
+    margin-top: 10px; /* Reduced margin-top from 40px to 20px */
     border-radius: 10px;
     object-fit: contain; /* Preserve aspect ratio */
     margin-bottom: 15px; /* Add some space below the image */
@@ -387,7 +387,7 @@ footer {
     object-fit: contain;
     display: flex;
 
-    margin-top: 20px; /* Reduced margin-top from 40px to 20px */
+    margin-top: 10px; /* Reduced margin-top from 40px to 20px */
     flex-direction: column; /* Ensure content is stacked vertically */
     align-items: center; /* Center content horizontally */
     justify-content: flex-start; /* Align items from the top */
@@ -414,7 +414,7 @@ footer {
 /* Paragraph style */
 .content-card p {
     background: rgba(255, 255, 255, 0.1); /* Background for the paragraph */
-    padding: 20px; /* Padding around text */
+    padding: 10px; /* Padding around text */
     font-size: 1rem; /* Adjust font size */
     line-height: 1.5; /* Add line spacing for readability */
 }
@@ -444,7 +444,7 @@ footer {
     justify-content: center; /* Center the content */
     min-width: 100%;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 10px;
 }
 
 .slide img {
@@ -478,7 +478,7 @@ footer {
     /* Card Container */
     .card-container {
         flex-direction: column; /* Stack image and content vertically */
-        padding: 15px; /* Adjust padding for small screens */
+        padding: 10px; /* Adjust padding for small screens */
         gap: 15px; /* Add gap between items */
         min-height: auto; /* Remove min-height for smaller screens */
     }
@@ -496,7 +496,7 @@ footer {
     /* Content Card */
     .content-card {
         width: 100%; /* Make content card full width */
-        padding: 15px; /* Reduce padding for better fit */
+        padding: 10px; /* Reduce padding for better fit */
         background: rgba(255, 255, 255, 0.2); /* Adjust background opacity */
         box-shadow: none; /* Remove box shadow */
         min-height: auto; /* Remove minimum height for better fit */
@@ -549,5 +549,34 @@ footer {
 
     .slide-content p {
         font-size: 1rem; /* Adjust paragraph font size */
+    }
+}
+.learn-more {
+    background-color:black; /* Bright blue color for visibility */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Slightly rounded corners */
+    margin-top: 5px; /* Padding for a button-like appearance */
+    font-size: 1rem; /* Default font size */
+    font-weight: bold; /* Make text bold */
+    text-transform: uppercase; /* Capitalize text */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.learn-more:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.learn-more:active {
+    transform: scale(1); /* Reset zoom on click */
+}
+
+@media (max-width: 768px) {
+    .learn-more {
+        width: 80%; /* Make button full-width on small screens */
+        font-size: 0.9rem; /* Slightly smaller text */
+        padding: 15px; /* Adjust padding for touch screens */
     }
 }
