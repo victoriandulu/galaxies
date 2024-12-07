@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Software Company</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <header>
+        <nav>
+            <i id="menuIcon" class="fas fa-bars nav-toggle"></i>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="industries.html">Industries Served</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+     <!-- Sidebar for small screens -->
+      <div id="sidebar" class="sidebar">
+        <a href="index.html" onclick="toggleSidebar()">Home</a>
+        <a href="about.html" onclick="toggleSidebar()">About Us</a>
+        <a href="services.html" onclick="toggleSidebar()">Our Projects</a>
+        <a href="industries.html" onclick="toggleSidebar()">Our Partners</a>
+        <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
+    </div>
+    <section id="intro-services">
+        <h2>Why Choose Our Services</h2>
+        <p>
+            At Galaxies Coders, we understand that every business has unique challenges and goals. 
+            Our team of experts provides tailored solutions to help you overcome obstacles, optimize operations, 
+            and unlock new growth opportunities. With cutting-edge technology, industry expertise, 
+            and a commitment to excellence, we deliver services that empower businesses to thrive in a 
+            fast-paced digital world.
+        </p>
+    </section>
+    
+    <section id="services">
+        <div class="services-container">
+            <div class="service-card" onclick="openModal('webDev')">
+                <i class="fas fa-code service-icon"></i>
+                <h3>Web Development</h3>
+                <p>Creating cutting-edge websites for your business needs.</p>
+            </div>
+            <div class="service-card" onclick="openModal('mobileDev')">
+                <i class="fas fa-mobile-alt service-icon"></i>
+                <h3>Mobile Development</h3>
+                <p>Building high-quality mobile applications for iOS and Android.</p>
+            </div>
+            <div class="service-card" onclick="openModal('uiux')">
+                <i class="fas fa-paint-brush service-icon"></i>
+                <h3>UI/UX Design</h3>
+                <p>Designing user-friendly interfaces and seamless experiences.</p>
+            </div>
+            <div class="service-card" onclick="openModal('webApp')">
+                <i class="fas fa-laptop service-icon"></i>
+                <h3>Web Applications</h3>
+                <p>Creating robust and scalable web applications.</p>
+            </div>
+            <div class="service-card" onclick="openModal('dataAnalysis')">
+                <i class="fas fa-chart-line service-icon"></i>
+                <h3>Data Analysis</h3>
+                <p>Providing actionable insights from your data.</p>
+            </div>
+            <div class="service-card" onclick="openModal('cloudComputing')">
+                <i class="fas fa-cloud service-icon"></i>
+                <h3>Cloud Computing</h3>
+                <p>Empowering your business with scalable cloud solutions.</p>
+            </div>
+            <div class="service-card" onclick="openModal('aiSolutions')">
+                <i class="fas fa-robot service-icon"></i>
+                <h3>AI Solutions</h3>
+                <p>Integrating AI to enhance business processes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="webDev" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('webDev')">&times;</span>
+            <h2>Web Development</h2>
+            <p>We specialize in building responsive and SEO-friendly websites tailored to your business needs.</p>
+        </div>
+    </div>
+    <div id="dataAnalysis" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('dataAnalysis')">&times;</span>
+            <h2>Data Analysis</h2>
+            <p>Our expert analysts provide actionable insights for data-driven decision-making.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Galaxies Coders. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+
+        function openModal(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            const menuIcon = document.getElementById("menuIcon");
+            
+            sidebar.classList.toggle("active");
+            
+            // Toggle the hamburger and close icon
+            menuIcon.classList.toggle("fa-bars");
+            menuIcon.classList.toggle("fa-times");
+        }
+        window.onscroll = function() {
+        var header = document.querySelector("header");
+        if (window.scrollY > 0) {  // When scroll position is greater than 0
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    };
+    
+        
+    </script>
+</body>
+</html>

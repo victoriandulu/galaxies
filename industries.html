@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industries Served | Software Company</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <i id="menuIcon" class="fas fa-bars nav-toggle" onclick="toggleSidebar()"></i>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="industries.html">Industries Served</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sidebar for small screens -->
+    <div id="sidebar" class="sidebar">
+        <a href="index.html" onclick="toggleSidebar()">Home</a>
+        <a href="about.html" onclick="toggleSidebar()">About Us</a>
+        <a href="services.html" onclick="toggleSidebar()">Our Projects</a>
+        <a href="industries.html" onclick="toggleSidebar()">Our Partners</a>
+        <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
+    </div>
+
+  
+    <section id="about-industries">
+        <h2>Industries We Have Served</h2>
+        <p>At our company, we pride ourselves on our ability to deliver innovative software solutions across a diverse range of industries. Over the years, we have worked closely with leaders in various sectors, providing tailored solutions that address their unique challenges and drive success. Our team has gained invaluable experience in transforming businesses through technology, whether it’s enhancing educational experiences, improving hospitality, advancing retail, or innovating in the beverage industry.</p>
+    </section>
+    
+    <!-- Industries Served Section -->
+    <section id="industries-served">
+        
+        <div class="card-container">
+            <!-- Industry 1 -->
+            <div class="industry-card">
+                <div class="card-icon">
+                    <i class="fas fa-school fa-3x"></i>
+                </div>
+                <h3>School</h3>
+                <p>Transforming education with smart solutions.</p>
+            </div>
+
+            <!-- Industry 2 -->
+            <div class="industry-card" >
+                <div class="card-icon">
+                    <i class="fas fa-hotel fa-3x"></i>
+                </div>
+                <h3>Hotel</h3>
+                <p>Improving hospitality through technology.</p>
+            </div>
+
+            <!-- Industry 3 -->
+            <div class="industry-card" >
+                <div class="card-icon">
+                    <i class="fas fa-book fa-3x"></i>
+                </div>
+                <h3>Bookshop</h3>
+                <p>Enhancing retail experience for bookshops.</p>
+            </div>
+
+            <!-- Industry 4 -->
+            <div class="industry-card" >
+                <div class="card-icon">
+                    <i class="fas fa-wine-glass fa-3x"></i>
+                </div>
+                <h3>Wines & Spirits</h3>
+                <p>Revolutionizing the beverage industry.</p>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Galaxies Coders. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to toggle the sidebar visibility
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const menuIcon = document.getElementById("menuIcon");
+    
+    sidebar.classList.toggle("active");
+    
+    // Toggle the hamburger and close icon
+    menuIcon.classList.toggle("fa-bars");
+    menuIcon.classList.toggle("fa-times");
+}
+
+
+
+window.onscroll = function() {
+        var header = document.querySelector("header");
+        if (window.scrollY > 0) {  // When scroll position is greater than 0
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    };
+
+    </script>
+</body>
+</html>
