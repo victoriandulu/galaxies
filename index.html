@@ -38,9 +38,10 @@
                 Your browser does not support the video tag.
             </video>
             <audio id="background-audio" loop>
-                <source src="about.mp3" type="audio/mp3">
+                <source src="about-galaxies.mp3" type="audio/mp3">
                 Your browser does not support the audio tag.
             </audio>
+            
         </div>
         
         
@@ -110,12 +111,26 @@ window.onscroll = function() {
         }
     };
 
-    document.addEventListener('click', function () {
-    const audio = document.getElementById('background-audio');
-    if (audio.paused) {
-        audio.play();
-    }
-});
+    window.addEventListener('load', function () {
+            const audio = document.getElementById('background-audio');
+
+            // Attempt to autoplay the audio
+            const playAudio = () => {
+                const playPromise = audio.play();
+
+                if (playPromise !== undefined) {
+                    playPromise.catch((error) => {
+                        console.warn("Autoplay blocked by browser:", error);
+
+                        // Retry playing the audio after user interaction
+                        document.addEventListener('click', playAudio, { once: true });
+                        document.addEventListener('keydown', playAudio, { once: true });
+                    });
+                }
+            };
+
+            playAudio(); // Attempt to play audio on load
+        });
 
 
     </script>
