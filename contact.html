@@ -17,18 +17,33 @@
             <i id="menuIcon" class="fas fa-bars nav-toggle" onclick="toggleSidebar()"></i>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="about.html">About Us</a>
+                    <ul class="dropdown-content">
+                        <li><a href="history.html">Our History</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="about.html#mission">Our Mission</a></li>
+                    </ul>
+                </li>
                 <li><a href="services.html">Our Services</a></li>
                 <li><a href="industries.html">Industries Served</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
+            
         </nav>
+        
     </header>
-
-    <!-- Sidebar for small screens -->
-    <div id="sidebar" class="sidebar">
+      <!-- Sidebar for small screens -->
+      <div id="sidebar" class="sidebar">
         <a href="index.html" onclick="toggleSidebar()">Home</a>
-        <a href="about.html" onclick="toggleSidebar()">About Us</a>
+        <div class="dropdown">
+            <a href="about.html" onclick="toggleDropdown(event)">About Us</a>
+            <div class="dropdown-content">
+                <a href="history.html" onclick="toggleSidebar()">Our History</a>
+                <a href="about.html#team" onclick="toggleSidebar()">Our Team</a>
+                <a href="about.html#mission" onclick="toggleSidebar()">Our Mission</a>
+            </div>
+        </div>
         <a href="services.html" onclick="toggleSidebar()">Our Services</a>
         <a href="industries.html" onclick="toggleSidebar()">Industries Served</a>
         <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
@@ -71,17 +86,43 @@
       <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <script>
-        // Function to toggle the sidebar visibility
-        function toggleSidebar() {
-            const sidebar = document.getElementById("sidebar");
-            const menuIcon = document.getElementById("menuIcon");
-            
-            sidebar.classList.toggle("active");
-            
-            // Toggle the hamburger and close icon
-            menuIcon.classList.toggle("fa-bars");
-            menuIcon.classList.toggle("fa-times");
-        }
+      
+        // Toggle the visibility of the dropdown content
+function toggleDropdown(event) {
+    event.preventDefault();
+    const dropdown = event.target.closest('.dropdown');
+    dropdown.classList.toggle('active');
+}
+
+        
+        // Toggle the sidebar on mobile
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const menuIcon = document.getElementById("menuIcon");
+
+    // Toggle the active class on the sidebar
+    sidebar.classList.toggle("active");
+
+    // Toggle the hamburger and close icon
+    menuIcon.classList.toggle("fa-bars");
+    menuIcon.classList.toggle("fa-times");
+}
+
+// Close the sidebar if the screen size is large enough
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        const sidebar = document.getElementById("sidebar");
+        const menuIcon = document.getElementById("menuIcon");
+        
+        // Remove the 'active' class to hide the sidebar
+        sidebar.classList.remove("active");
+
+        // Reset the menu icon to its hamburger state
+        menuIcon.classList.add("fa-bars");
+        menuIcon.classList.remove("fa-times");
+    }
+});
+
         (function(){
             emailjs.init("PLlXKBc-lreGCE27Q"); // replace with your actual user ID
         })();

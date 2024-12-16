@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our History | Software Company</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <i id="menuIcon" class="fas fa-bars nav-toggle" onclick="toggleSidebar()"></i>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="about.html">About Us</a>
+                    <ul class="dropdown-content">
+                        <li><a href="history.html">Our History</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="about.html#mission">Our Mission</a></li>
+                    </ul>
+                </li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="industries.html">Industries Served</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            
+        </nav>
+        
+    </header>
+      <!-- Sidebar for small screens -->
+      <div id="sidebar" class="sidebar">
+        <a href="index.html" onclick="toggleSidebar()">Home</a>
+        <div class="dropdown">
+            <a href="about.html" onclick="toggleDropdown(event)">About Us</a>
+            <div class="dropdown-content">
+                <a href="history.html" onclick="toggleSidebar()">Our History</a>
+                <a href="about.html#team" onclick="toggleSidebar()">Our Team</a>
+                <a href="about.html#mission" onclick="toggleSidebar()">Our Mission</a>
+            </div>
+        </div>
+        <a href="services.html" onclick="toggleSidebar()">Our Services</a>
+        <a href="industries.html" onclick="toggleSidebar()">Industries Served</a>
+        <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
+    </div>
+    
+
+    <!-- Our History Section -->
+    <section id="history">
+        <div class="history-item">
+            <div class="history-content">
+                <h2>Our Beginning</h2>
+                <p>In 2019, a group of young and passionate software developers came together with a vision to innovate and create solutions for the tech industry.</p>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="history-image">
+                <img src="victoria-milly.png" alt="History Image 1">
+            </div>
+        </div>
+
+        <div class="history-item reverse">
+            <div class="history-content">
+                <h2>Our Growth</h2>
+                <p>By 2021, we had expanded our team and services, working with local businesses and gaining recognition for our innovative solutions and commitment to excellence.</p>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="history-image">
+                <img src="victoria-milly.png" alt="History Image 2">
+            </div>
+        </div>
+
+        <div class="history-item">
+            <div class="history-content">
+                <h2>Our Impact</h2>
+                <p>Today, we are a leading software development company, impacting businesses across the globe with our cutting-edge solutions.</p>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="history-image">
+                <img src="your-image-path-3.jpg" alt="History Image 3">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Galaxies Coders. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        window.onscroll = function() {
+        var header = document.querySelector("header");
+        if (window.scrollY > 0) {  // When scroll position is greater than 0
+            header.classList.add("scrolled");
+        } else {
+            header.classList.add("scrolled");
+        }
+    };
+        // Toggle the sidebar on mobile
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            const menuIcon = document.getElementById("menuIcon");
+
+            // Toggle the active class on the sidebar
+            sidebar.classList.toggle("active");
+
+            // Toggle the hamburger and close icon
+            menuIcon.classList.toggle("fa-bars");
+            menuIcon.classList.toggle("fa-times");
+        }
+
+        // Close the sidebar if the screen size is large enough
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                const sidebar = document.getElementById("sidebar");
+                const menuIcon = document.getElementById("menuIcon");
+                
+                // Remove the 'active' class to hide the sidebar
+                sidebar.classList.remove("active");
+
+                // Reset the menu icon to its hamburger state
+                menuIcon.classList.add("fa-bars");
+                menuIcon.classList.remove("fa-times");
+            }
+        });
+    </script>
+</body>
+</html>

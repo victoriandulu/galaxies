@@ -14,23 +14,37 @@
             <i id="menuIcon" class="fas fa-bars nav-toggle" onclick="toggleSidebar()"></i>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="about.html">About Us</a>
+                    <ul class="dropdown-content">
+                        <li><a href="history.html">Our History</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="about.html#mission">Our Mission</a></li>
+                    </ul>
+                </li>
                 <li><a href="services.html">Our Services</a></li>
-                <li><a href="index.html">Industries Served</a></li>
+                <li><a href="industries.html">Industries Served</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
+            
         </nav>
         
     </header>
       <!-- Sidebar for small screens -->
       <div id="sidebar" class="sidebar">
         <a href="index.html" onclick="toggleSidebar()">Home</a>
-        <a href="about.html" onclick="toggleSidebar()">About Us</a>
-        <a href="services.html" onclick="toggleSidebar()">Our Service</a>
+        <div class="dropdown">
+            <a href="about.html" onclick="toggleDropdown(event)">About Us</a>
+            <div class="dropdown-content">
+                <a href="history.html" onclick="toggleSidebar()">Our History</a>
+                <a href="about.html#team" onclick="toggleSidebar()">Our Team</a>
+                <a href="about.html#mission" onclick="toggleSidebar()">Our Mission</a>
+            </div>
+        </div>
+        <a href="services.html" onclick="toggleSidebar()">Our Services</a>
         <a href="industries.html" onclick="toggleSidebar()">Industries Served</a>
         <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
     </div>
-
     <!-- About Us Section -->
     <section id="about">
         <h2>About Us</h2>
@@ -52,20 +66,37 @@
     <!-- Team Section -->
     <section id="team">
         <h2>Meet Our Team</h2>
+        <div class="team-container">
         <div class="team-member">
-            <img src="team1.jpg" alt="Team Member 1">
-            <h3>John Doe</h3>
+            <img src="ndulu (2).png" alt="Team Member 1">
+            <h3>Victoria Ndulu</h3>
             <p>CEO & Founder</p>
         </div>
         <div class="team-member">
-            <img src="team2.jpg" alt="Team Member 2">
-            <h3>Jane Smith</h3>
-            <p>Lead Developer</p>
+            <img src="john.png" alt="Team Member 2">
+            <h3>John Kaiser</h3>
+            <p>CTO, Chief Technology Officer</p>
         </div>
         <div class="team-member">
-            <img src="team3.jpg" alt="Team Member 3">
-            <h3>Mike Johnson</h3>
+            <img src="mercy.jpeg" alt="Team Member 3">
+            <h3>Mercy Muoki</h3>
             <p>Project Manager</p>
+        </div>
+        <div class="team-member">
+            <img src="kibet.png" alt="Team Member 3">
+            <h3>Emmanuel Kibet</h3>
+            <p>Data analyst</p>
+        </div>
+         <div class="team-member">
+            <img src="mercy.jpeg" alt="Team Member 3">
+            <h3>Mercy Muoki</h3>
+            <p>Project Manager</p>
+        </div>
+        <div class="team-member">
+            <img src="kibet.png" alt="Team Member 3">
+            <h3>Emmanuel Kibet</h3>
+            <p>Data analyst</p>
+        </div>
         </div>
     </section>
 
@@ -75,16 +106,43 @@
     </footer>
 
     <script>
-         function toggleSidebar() {
-            const sidebar = document.getElementById("sidebar");
-            const menuIcon = document.getElementById("menuIcon");
-            
-            sidebar.classList.toggle("active");
-            
-            // Toggle the hamburger and close icon
-            menuIcon.classList.toggle("fa-bars");
-            menuIcon.classList.toggle("fa-times");
-        }
+         
+        // Toggle the visibility of the dropdown content
+function toggleDropdown(event) {
+    event.preventDefault();
+    const dropdown = event.target.closest('.dropdown');
+    dropdown.classList.toggle('active');
+}
+
+        
+        // Toggle the sidebar on mobile
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const menuIcon = document.getElementById("menuIcon");
+
+    // Toggle the active class on the sidebar
+    sidebar.classList.toggle("active");
+
+    // Toggle the hamburger and close icon
+    menuIcon.classList.toggle("fa-bars");
+    menuIcon.classList.toggle("fa-times");
+}
+
+// Close the sidebar if the screen size is large enough
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        const sidebar = document.getElementById("sidebar");
+        const menuIcon = document.getElementById("menuIcon");
+        
+        // Remove the 'active' class to hide the sidebar
+        sidebar.classList.remove("active");
+
+        // Reset the menu icon to its hamburger state
+        menuIcon.classList.add("fa-bars");
+        menuIcon.classList.remove("fa-times");
+    }
+});
+
         window.onscroll = function() {
         var header = document.querySelector("header");
         if (window.scrollY > 0) {  // When scroll position is greater than 0

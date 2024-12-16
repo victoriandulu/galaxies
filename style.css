@@ -161,7 +161,41 @@ nav ul li a:hover {
     object-fit: cover;
     object-position: center;
 }
+/* Content Styling */
+.content {
+    position: absolute;
+    top: 50%; /* Centers the content vertically */
+    left: 10%; /* Adjusts the content to the left side */
+    transform: translateY(-50%); /* Ensures vertical centering */
+    color: #fff;
+    text-align: left;
+    max-width: 400px;
+}
 
+.content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.content button {
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.content button:hover {
+    background-color: #FFA500;
+}
 /* Content inside Home */
 #home .content {
     z-index: 1;
@@ -866,15 +900,26 @@ footer {
     color: #333;
 }
 
+.team-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: center; /* Center items in the row */
+    gap: 20px; /* Add spacing between items */
+}
+
 .team-member {
-    display: inline-block;
-    width: 30%;
-    margin: 0 15px;
-    text-align: center;
-    padding: 20px;
+    flex: 0 1 calc(33.333% - 20px); /* Three members per row, accounting for spacing */
     background-color: #fff;
+    text-align: center;
     border-radius: 10px;
+    padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
 }
 
 .team-member img {
@@ -888,12 +933,27 @@ footer {
 .team-member h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
+    color: #003366;
 }
 
 .team-member p {
     font-size: 1.1em;
     color: #666;
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .team-member {
+        flex: 0 1 calc(50% - 20px); /* Two members per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .team-member {
+        flex: 0 1 100%; /* One member per row on smaller screens */
+    }
+}
+
 
 /* Responsive design adjustments */
 @media (max-width: 768px) {
@@ -1132,3 +1192,197 @@ footer {
     padding-left: 40px; /* Adds padding to the left for text */
     width: 100%; /* Ensures the section spans the full width */
 }
+.h2{
+    color: #FFA500;
+}
+
+
+/* Dropdown menu styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    float: none;
+}
+
+.dropdown-content li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content li a:hover {
+    background-color: #ddd;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown styles in sidebar */
+.sidebar .dropdown {
+    position: relative;
+}
+
+.sidebar .dropdown-content {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    padding-left: 20px; /* Indent sub-menu */
+}
+
+.sidebar .dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.sidebar .dropdown-content a:hover {
+    background-color: #575757;
+}
+
+.sidebar .dropdown.active .dropdown-content {
+    display: flex; /* Show the dropdown content */
+}
+/* HISTORY */
+#history {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.history-content {
+    width: 45%;
+    padding: 20px;
+}
+
+.history-content h2 {
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.history-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.history-image {
+    width: 45%;
+    padding: 20px;
+    background-image: url('background.jpeg'); /* Background image URL */
+    background-size: cover; /* Ensure the background covers the div */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    border-radius: 8px; /* Optional: add border-radius to make the background image rounded */
+}
+
+.history-image img {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    display: block; /* Remove any space below the image */
+}
+
+
+.vertical-line {
+    height: 300px; /* Set a specific height for the vertical line */
+    width: 2px;
+    background-color: #003366;
+    margin: 0 20px; /* Add margin for spacing */
+    position: absolute;
+    top: 0;
+    left: 50%; /* Center the vertical line */
+    transform: translateX(-50%); /* Ensure it's perfectly centered */
+}
+
+/* Media query for large screens (default view) */
+@media (min-width: 769px) {
+    .history-item {
+        flex-direction: row; /* Content and image side by side */
+    }
+
+    .history-content {
+        order: 1; /* Content comes first */
+    }
+
+    .history-image {
+        order: 2; /* Image comes second */
+    }
+
+    /* Alternate layout for every other item */
+    .history-item:nth-child(odd) .history-content {
+        order: 1; /* Content comes first */
+    }
+
+    .history-item:nth-child(odd) .history-image {
+        order: 2; /* Image comes second */
+    }
+
+    .history-item:nth-child(even) .history-content {
+        order: 2; /* Content comes second */
+    }
+
+    .history-item:nth-child(even) .history-image {
+        order: 1; /* Image comes first */
+    }
+
+    .vertical-line {
+        display: block; /* Show the vertical line */
+        position: absolute;
+        top: 0;
+        left: 50%; /* Center the vertical line */
+        transform: translateX(-50%); /* Ensure it's perfectly centered */
+        height: 300px;
+        background-color: #003366;
+        margin: 0;
+    }
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .history-item {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+    }
+
+    .history-content {
+        width: 100%; /* Ensure content takes full width */
+        order: 1; /* Content comes first */
+        margin-bottom: 20px; /* Space between content and image */
+    }
+
+    .history-image {
+        width: 100%; /* Ensure image takes full width */
+        order: 2; /* Image comes after content */
+        margin-bottom: 20px; /* Space below the image */
+    }
+
+    .vertical-line {
+        display: block; /* Show the vertical line on small screens */
+        position: absolute;
+        bottom: -20px; /* Position the line towards the bottom of the content */
+        left: 0; /* Position it on the left */
+        height: 150px; /* Adjust height for better positioning */
+        background-color: #003366;
+        margin: 0;
+    }
+}
+
