@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Software Company</title>
+    <title>Our Services | Galaxies Coders</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
   
@@ -15,14 +15,22 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="about.html">About Us</a>
+                    <a href="about.html">About Us <i class="fas fa-caret-down"></i></a>
                     <ul class="dropdown-content">
                         <li><a href="history.html">Our History</a></li>
                         <li><a href="about.html#team">Our Team</a></li>
                         <li><a href="about.html#mission">Our Mission</a></li>
                     </ul>
                 </li>
-                <li><a href="services.html">Our Services</a></li>
+                <li class="dropdown">
+                    <a href="services.html">Our Services <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="history.html">Software Services</a></li>
+                        <li><a href="about.html#team">Hardware Services</a></li>
+                        <li><a href="about.html#mission">CCTV installation</a></li>
+                    </ul>
+                </li>
+                
                 <li><a href="industries.html">Industries Served</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -41,7 +49,13 @@
                 <a href="about.html#mission" onclick="toggleSidebar()">Our Mission</a>
             </div>
         </div>
-        <a href="services.html" onclick="toggleSidebar()">Our Services</a>
+        <a href="services.html" >Our Services<i class="fas fa-caret-down" onclick="toggleSidebar(event)"></i></a>
+        <div class="dropdown-content">
+            <a href="history.html" onclick="toggleSidebar()">Our History</a>
+            <a href="about.html#team" onclick="toggleSidebar()">Our Team</a>
+            <a href="about.html#mission" onclick="toggleSidebar()">Our Mission</a>
+        </div>
+
         <a href="industries.html" onclick="toggleSidebar()">Industries Served</a>
         <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
     </div>

@@ -839,7 +839,7 @@ footer {
 /* About Us Section */
 #about {
     background-color: #000033; 
-    color: white;
+    
     padding: 20px;
     text-align: center;
     height: 80vh; /* Set the height to 80% of the viewport height */
@@ -849,10 +849,12 @@ footer {
     flex-direction: column;
 }
 
-#about h2 {
+#about h3 {
     font-size: 3em;
     margin-bottom: 20px;
+    margin-top: 15px;
     font-weight: bold;
+    color:#FFA500 ;
     text-transform: uppercase;
 }
 
@@ -860,6 +862,7 @@ footer {
     font-size: 1.2em;
     max-width: 800px;
     margin: 0 auto;
+    color: white;
     line-height: 1.6;
     opacity: 0.85;
 }
@@ -1254,8 +1257,17 @@ footer {
     display: flex; /* Show the dropdown content */
 }
 /* HISTORY */
+#history-about{
+    background-color: #000033; 
+    background-attachment: fixed; /* Keeps the image fixed as the user scrolls */ 
+    height: 0.5vh; /* Set the height to 80% of the viewport height */
+    display: flex;
+    width: 100%; /* Ensures the section spans the full width */
+
+}
 #history {
     display: flex;
+
     flex-direction: column;
     padding: 40px;
     background-color: #f4f4f4;
@@ -1312,6 +1324,17 @@ footer {
     left: 50%; /* Center the vertical line */
     transform: translateX(-50%); /* Ensure it's perfectly centered */
 }
+.year {
+    position: absolute;
+    top: -40px; /* Adjust the position to be above the vertical line */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px; /* Size of the year text */
+    color: #003366; /* Match the vertical line's color */
+    font-weight: bold; /* Make the year bold for better visibility */
+    text-align: center;
+}
+
 
 /* Media query for large screens (default view) */
 @media (min-width: 769px) {
@@ -1386,3 +1409,36 @@ footer {
     }
 }
 
+ /* Style the dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+
+
+
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style the arrow */
+.dropdown > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    text-decoration: none;
+   
+}
+
+.dropdown > a .fas {
+    font-size: 0.8em;
+    transition: transform 0.3s;
+}
+
+/* Rotate the arrow when hovering over dropdown */
+.dropdown:hover > a .fas {
+    transform: rotate(180deg);
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our History | Software Company</title>
+    <title>Our History | Galaxies Coders</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -44,11 +44,14 @@
         <a href="industries.html" onclick="toggleSidebar()">Industries Served</a>
         <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
     </div>
-    
+    <section id="history-about">
+
+    </section>
 
     <!-- Our History Section -->
     <section id="history">
         <div class="history-item">
+            <div class="year">2019</div> <!-- Year above the vertical line -->
             <div class="history-content">
                 <h2>Our Beginning</h2>
                 <p>In 2019, a group of young and passionate software developers came together with a vision to innovate and create solutions for the tech industry.</p>
@@ -58,19 +61,22 @@
                 <img src="victoria-milly.png" alt="History Image 1">
             </div>
         </div>
-
+    
         <div class="history-item reverse">
+            <div class="year">2021</div> <!-- Year above the vertical line -->
             <div class="history-content">
-                <h2>Our Growth</h2>
-                <p>By 2021, we had expanded our team and services, working with local businesses and gaining recognition for our innovative solutions and commitment to excellence.</p>
+                <h2>Expanding into Hardware Services</h2>
+                <p>By 2021, we broadened our scope by introducing specialized hardware services to meet the growing needs of our clients. These services included CCTV installation, network data cabling and data points setup, Starlink internet installation, alarm system installation, server setup, and office phone system installation. Our commitment to delivering quality solutions established us as a trusted partner for businesses looking to enhance their technological infrastructure.</p>
+                
             </div>
             <div class="vertical-line"></div>
             <div class="history-image">
                 <img src="victoria-milly.png" alt="History Image 2">
             </div>
         </div>
-
+    
         <div class="history-item">
+            <div class="year">2024</div> <!-- Year above the vertical line -->
             <div class="history-content">
                 <h2>Our Impact</h2>
                 <p>Today, we are a leading software development company, impacting businesses across the globe with our cutting-edge solutions.</p>
@@ -81,6 +87,7 @@
             </div>
         </div>
     </section>
+    
 
     <footer>
         <p>&copy; 2024 Galaxies Coders. All Rights Reserved.</p>
@@ -92,7 +99,7 @@
         if (window.scrollY > 0) {  // When scroll position is greater than 0
             header.classList.add("scrolled");
         } else {
-            header.classList.add("scrolled");
+            header.classList.remove("scrolled");
         }
     };
         // Toggle the sidebar on mobile
