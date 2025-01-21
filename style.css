@@ -8,6 +8,7 @@
 body {
     font-family: Arial, sans-serif;
 }
+
 /* Initial header style */
 header {
     padding: 15px 0;
@@ -1442,3 +1443,5 @@ footer {
 .dropdown:hover > a .fas {
     transform: rotate(180deg);
 }
+
+

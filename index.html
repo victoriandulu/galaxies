@@ -48,7 +48,7 @@
     <!-- Home Section with background video -->
     <section id="home">
         <div class="video-background" >
-            <div class="background-image" style="background-image: url('background.jpeg'); height: 100%; background-size: cover; background-position: center;">
+            <div class="background-image" style="background-image: url('dark-background.jpg'); height: 100%; background-size: cover; background-position: center;">
                 <audio id="background-audio" loop autoplay>
                     <source src="about-galaxies.mp3" type="audio/mp3">
                     Your browser does not support the audio tag.
@@ -63,28 +63,7 @@
     </section>
     
     
-        <!-- Our Champions Section -->
-        <section id="champions">
-            <h2 class="section-title">Our Champions</h2>
-            <div class="champion-container">
-                <div class="champion-card">
-                    <img src="champion1.jpg" alt="Champion 1">
-                    <h3>Jane Doe</h3>
-                    <p>Lead Developer with expertise in AI-driven solutions.</p>
-                </div>
-                <div class="champion-card">
-                    <img src="champion2.jpg" alt="Champion 2">
-                    <h3>John Smith</h3>
-                    <p>Project Manager ensuring seamless execution of projects.</p>
-                </div>
-                <div class="champion-card">
-                    <img src="champion3.jpg" alt="Champion 3">
-                    <h3>Emily White</h3>
-                    <p>UI/UX Designer crafting user-centric experiences.</p>
-                </div>
-            </div>
-        </section>
-    
+   
 
     <!-- Footer Section -->
     <footer>
@@ -151,7 +130,7 @@ window.onscroll = function() {
         if (window.scrollY > 0) {  // When scroll position is greater than 0
             header.classList.add("scrolled");
         } else {
-            header.classList.remove("scrolled");
+            header.classList.add("scrolled");
         }
     };
 
