@@ -49,12 +49,21 @@
     <!-- Home Section with background video -->
     <section id="home">
         <div class="video-background" >
-            <div class="background-image" style="background-image: url('dark-background.jpg'); height: 100%; background-size: cover; background-position: center;">
-                <audio id="background-audio" loop autoplay>
-                    <source src="about-galaxies.mp3" type="audio/mp3">
-                    Your browser does not support the audio tag.
-                </audio>
-            </div>
+            <!-- Background Video -->
+            <video autoplay loop muted playsinline >
+                <source src="software.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        
+        
+        
+            <!-- Background Audio -->
+            <audio id="background-audio" loop autoplay>
+                <source src="about-galaxies.mp3" type="audio/mp3">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+        
             <div class="content">
                 <h1>Galaxies Coders</h1>
                 <p>Discover innovative software solutions for your business needs.</p>
@@ -131,7 +140,7 @@ window.onscroll = function() {
         if (window.scrollY > 0) {  // When scroll position is greater than 0
             header.classList.add("scrolled");
         } else {
-            header.classList.add("scrolled");
+            header.classList.remove("scrolled");
         }
     };
 
