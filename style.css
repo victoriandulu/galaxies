@@ -20,116 +20,154 @@ header {
     background: rgba(255, 255, 255, 0.1); /* Transparent background */
     box-shadow: none;
     transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Smooth transition */
-}
-
-/* When the user scrolls */
-header.scrolled {
+  }
+  
+  /* When the user scrolls */
+  header.scrolled {
     background-color: white; /* White background when scrolled */
     color: black; /* Text color changes to black */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow after scrolling */
-}
-
-/* Make sure the links inside the header also change color */
-header.scrolled a {
+  }
+  
+  /* Make sure the links inside the header also change color */
+  header.scrolled a {
     color: black; /* Link color changes to black when scrolled */
-}
-
-/* Optional: Change the color of the menu icon if needed */
-header.scrolled .nav-toggle {
+  }
+  
+  /* Optional: Change the color of the menu icon if needed */
+  header.scrolled .nav-toggle {
     color: black; /* Change hamburger menu icon color to black */
-}
-
-
-
-nav ul {
+  }
+  
+  /* Navigation for large screens */
+  nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-}
-
-nav ul li {
+  }
+  
+  nav ul li {
     margin: 0 15px;
-}
-
-nav ul li a {
+  }
+  
+  nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
-}
-
-nav ul li a:hover {
+  }
+  
+  nav ul li a:hover {
     color: #FFA500;
-}
-
-/* Hamburger icon styles */
-.nav-toggle {
+  }
+  
+  /* Hamburger icon styles */
+  .nav-toggle {
     display: none; /* Hidden by default */
     font-size: 1.5em;
     cursor: pointer;
     position: absolute;
     top: 1rem;
     left: 1rem;
-}
-
-/* Sidebar styles for small screens */
-.sidebar {
+  }
+  
+  /* Sidebar styles for small screens */
+  .sidebar {
     display: none; /* Hidden by default */
     position: fixed;
     top: 60px; /* Adjusted for header height */
     left: 0;
-    width: 45%;
+    width: 80%;       /* Use a larger width for better visibility */
+    max-width: 300px; /* Cap the maximum width */
     height: 100%;
-   background-color: whitesmoke;
+    background-color: whitesmoke;
     color: black;
     flex-direction: column;
     padding: 20px 0;
     z-index: 1000;
     text-align: center;
-}
-
-
-/* Sidebar visible when active */
-.sidebar.active {
+  }
+  
+  /* Sidebar visible when active */
+  .sidebar.active {
     display: flex;
-    flex-direction: column;
-}
-
-.sidebar a {
+  }
+  
+  /* Sidebar main links styling */
+  .sidebar a {
+    display: block;          /* Make links block-level for full-width clickable areas */
     color: black;
     text-decoration: none;
-    font-size: 24px;
-    margin: 15px 0;
-}
-
-.sidebar a:hover {
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .sidebar a:hover {
     color: aqua;
-}
-
-/* Media Queries */
-
-/* Large screens: hide the hamburger and show nav links */
-@media (min-width: 769px) {
+  }
+  
+  /* Dropdown container within the sidebar */
+  .sidebar .dropdown {
+    width: 100%;
+  }
+  
+  /* Style for dropdown trigger (the parent link) */
+  .sidebar .dropdown > a {
+    font-size: 20px;
+  }
+  
+  /* Dropdown content hidden by default */
+  .sidebar .dropdown-content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  /* When dropdown is toggled open, show its content */
+  .sidebar .dropdown.active .dropdown-content {
+    display: flex;
+  }
+  
+  /* Style for dropdown items */
+  .sidebar .dropdown-content a {
+    font-size: 18px;
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Optional: Remove the border from the first dropdown item */
+  .sidebar .dropdown-content a:first-child {
+    border-top: none;
+  }
+  
+  /* Media Queries */
+  
+  /* Large screens: hide the hamburger and show nav links */
+  @media (min-width: 769px) {
     .nav-toggle {
-        display: none !important;/* Hide the hamburger icon */
+      display: none !important; /* Hide the hamburger icon */
     }
-
+  
     nav ul {
-        display: flex; /* Show nav links horizontally */
+      display: flex; /* Show nav links horizontally */
     }
-}
-
-/* Small screens: show the hamburger and hide nav links */
-@media (max-width: 768px) {
+  }
+  
+  /* Small screens: show the hamburger and hide nav links */
+  @media (max-width: 768px) {
     .nav-toggle {
-        display: block; /* Show the hamburger icon */
+      display: block; /* Show the hamburger icon */
     }
-
+  
     nav ul {
-        display: none; /* Hide nav links */
+      display: none; /* Hide nav links */
     }
-}
-
+  }
+  
 /* Home Section */
 #home {
     color: white;
@@ -319,6 +357,7 @@ form button:hover {
 }
 
 
+  
 
 /* Contact Form Section */
 #contact {
@@ -1444,4 +1483,19 @@ footer {
     transform: rotate(180deg);
 }
 
-
+/* for elearning */
+.btn-register {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000033;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-register:hover {
+    background-color: #333366;
+  }
+  

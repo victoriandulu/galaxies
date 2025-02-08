@@ -23,6 +23,7 @@
                     </ul>
                 </li>
                 <li><a href="services.html">Our Services</a></li>
+                
                 <li><a href="industries.html">Industries Served</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -30,21 +31,21 @@
         </nav>
         
     </header>
-      <!-- Sidebar for small screens -->
-      <div id="sidebar" class="sidebar">
-        <a href="index.html" onclick="toggleSidebar()">Home</a>
-        <div class="dropdown">
-            <a href="about.html" onclick="toggleDropdown(event)">About Us</a>
-            <div class="dropdown-content">
-                <a href="history.html" onclick="toggleSidebar()">Our History</a>
-                <a href="about.html#team" onclick="toggleSidebar()">Our Team</a>
-                <a href="about.html#mission" onclick="toggleSidebar()">Our Mission</a>
-            </div>
-        </div>
-        <a href="services.html" onclick="toggleSidebar()">Our Services</a>
-        <a href="industries.html" onclick="toggleSidebar()">Industries Served</a>
-        <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
-    </div>
+     <!-- Sidebar for small screens -->
+<div id="sidebar" class="sidebar">
+    <a href="index.html" onclick="toggleSidebar()">Home</a>
+    
+    
+      <a href="about.html" onclick="toggleDropdown()">About Us</a>
+     
+        <a href="history.html" onclick="toggleSidebar()">Our History</a>
+        <a href="mpos.html">POS Services</a>
+        <a href="services.html">All Services</a>
+
+    <a href="industries.html" onclick="toggleSidebar()">Industries Served</a>
+    <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
+  </div>
+  
     
     <!-- Home Section with background video -->
     <section id="home">
@@ -81,9 +82,9 @@
     </footer>
 
     <script>
-
+    
         // Toggle the visibility of the dropdown content
-function toggleDropdown(event) {
+        function toggleDropdown(event) {
     event.preventDefault();
     const dropdown = event.target.closest('.dropdown');
     dropdown.classList.toggle('active');
@@ -117,6 +118,7 @@ window.addEventListener('resize', function() {
         menuIcon.classList.remove("fa-times");
     }
 });
+
 
         let currentIndex = 0;
         const slides = document.querySelectorAll('.slide');
