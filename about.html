@@ -1,156 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Galaxies Coders</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Galaxies Coders</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Modal Styles */
+    .modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+}
 
+.modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  margin: 15% auto;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: modalSlideIn 0.5s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.close-wrapper {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-button {
+  color: #000033;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #666;
+}
+
+.modal-header h2 {
+  color: #333;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.feature-item {
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.feature-item i {
+  font-size: 24px;
+  color: #000033;
+  margin-bottom: 8px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #000033;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <i id="menuIcon" class="fas fa-bars nav-toggle" onclick="toggleSidebar()"></i>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="about.html">About Us</a>
-                    <ul class="dropdown-content">
-                        <li><a href="history.html">Our History</a></li>
-                        <li><a href="about.html#team">Our Team</a></li>
-                        <li><a href="about.html#mission">Our Mission</a></li>
-                    </ul>
-                </li>
-                <li><a href="services.html">Our Services</a></li>
-                <li><a href="industries.html">Industries Served</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            
-        </nav>
-        
-    </header>
-       <!-- Sidebar for small screens -->
-<div id="sidebar" class="sidebar">
+  <header>
+    <nav>
+      <i id="menuIcon" class="fas fa-bars nav-toggle" onclick="toggleSidebar()"></i>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="about.html">About Us</a>
+          <ul class="dropdown-content">
+            <li><a href="history.html">Our History</a></li>
+            <li><a href="about.html#team">Our Team</a></li>
+            <li><a href="about.html#mission">Our Mission</a></li>
+          </ul>
+        </li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="industries.html">Industries Served</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Sidebar for small screens -->
+  <div id="sidebar" class="sidebar">
     <a href="index.html" onclick="toggleSidebar()">Home</a>
-    
-    
-      <a href="about.html" onclick="toggleDropdown()">About Us</a>
-     
-        <a href="history.html" onclick="toggleSidebar()">Our History</a>
-        <a href="mpos.html">POS Services</a>
-        <a href="services.html">All Services</a>
-
+    <a href="about.html" onclick="toggleDropdown(event)">About Us</a>
+    <a href="history.html" onclick="toggleSidebar()">Our History</a>
+    <a href="mpos.html">POS Services</a>
+    <a href="services.html">All Services</a>
     <a href="industries.html" onclick="toggleSidebar()">Industries Served</a>
     <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
   </div>
-    <!-- About Us Section -->
-    <section id="about">
-        <h3>About Us</h3>
-        <p>Founded in 2019, we are a group of passionate young software developers committed to providing innovative solutions to the tech industry. Our mission is to create opportunities for talented individuals and mentor the next generation of tech leaders.</p>
-    </section>
-
-    <!-- Mission Section -->
-    <section id="mission">
-        <h2>Mission</h2>
-        <p>To empower young developers by providing them with opportunities to grow and learn, while creating innovative software solutions that address real-world challenges.</p>
-    </section>
-
-    <!-- Vision Section -->
-    <section id="vision">
-        <h2>Vision</h2>
-        <p>To become a leading technology company that nurtures young talent and fosters creativity and innovation in the software development field.</p>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team">
-        <h2>Meet The Leadership Board</h2>
-        <div class="team-container">
-        <div class="team-member">
-            <img src="john-kaiser.jpeg" alt="Team Member 1">
-            <h3>John Kaiser</h3>
-            <p>CEO & Founder</p>
+  
+  <!-- Modal Popup -->
+  <!-- Modal HTML -->
+<div id="welcomeModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      
+      <div class="modal-header">
+        <h2>Welcome to Galaxies Coders! 🚀</h2>
+      </div>
+  
+      <div class="modal-body">
+        <div class="feature-grid">
+          <div class="feature-item">
+            <i class="fas fa-code"></i>
+            <h3>Software Development</h3>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Mobile Apps</h3>
+          </div>
         </div>
-        <div class="team-member">
-            <img src="ndulu (2).png" alt="Team Member 2">
-            <h3>Victoria Muithya</h3>
-            <p>CTO & Founder</p>
-        </div>
-        <div class="team-member">
-            <img src="mercy.jpeg" alt="Team Member 3">
-            <h3>Mercy Muoki</h3>
-            <p>Project Manager</p>
-        </div>
-        <div class="team-member">
-            <img src="kibet.png" alt="Team Member 3">
-            <h3>Emmanuel Kibet</h3>
-            <p>Data analyst</p>
-        </div>
-         <div class="team-member">
-            <img src="" alt="Team Member 3">
-            <h3>Anthony Mwani</h3>
-            <p>Software Engineer</p>
-        </div>
-        <div class="team-member">
-            <img src="" alt="Team Member 3">
-            <h3>Esther mutheu</h3>
-            <p>Software Engineer</p>
-        </div>
-        </div>
-    </section>
+      </div>
+  
+      <div class="modal-footer">
+        <a href="#" id="whatsappLink" class="cta-button">Chat With Us</a>
+      </div>
+    </div>
+  </div>
+      
+  
+  <!-- About Us Section -->
+  <section id="about">
+    <h3>About Us</h3>
+    <p>Founded in 2019, we are a group of passionate young software developers committed to providing innovative solutions to the tech industry. Our mission is to create opportunities for talented individuals and mentor the next generation of tech leaders.</p>
+  </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Galaxies Coders. All Rights Reserved.</p>
-    </footer>
+  <!-- Mission Section -->
+  <section id="mission">
+    <h2>Mission</h2>
+    <p>To empower young developers by providing them with opportunities to grow and learn, while creating innovative software solutions that address real-world challenges.</p>
+  </section>
 
-    <script>
-         
-        // Toggle the visibility of the dropdown content
-function toggleDropdown(event) {
-    event.preventDefault();
-    const dropdown = event.target.closest('.dropdown');
-    dropdown.classList.toggle('active');
-}
+  <!-- Vision Section -->
+  <section id="vision">
+    <h2>Vision</h2>
+    <p>To become a leading technology company that nurtures young talent and fosters creativity and innovation in the software development field.</p>
+  </section>
 
-        
-        // Toggle the sidebar on mobile
-function toggleSidebar() {
-    const sidebar = document.getElementById("sidebar");
-    const menuIcon = document.getElementById("menuIcon");
+  <!-- Team Section -->
+  <section id="team">
+    <h2>Meet The Leadership Board</h2>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="john-kaiser.jpeg" alt="Team Member 1">
+        <h3>John Kaiser</h3>
+        <p>CEO & Founder</p>
+      </div>
+      <div class="team-member">
+        <img src="ndulu (2).png" alt="Team Member 2">
+        <h3>Victoria Muithya</h3>
+        <p>CTO & Founder</p>
+      </div>
+      <div class="team-member">
+        <img src="mercy.jpeg" alt="Team Member 3">
+        <h3>Mercy Muoki</h3>
+        <p>Project Manager</p>
+      </div>
+      <div class="team-member">
+        <img src="kibet.png" alt="Team Member 4">
+        <h3>Emmanuel Kibet</h3>
+        <p>Data Analyst</p>
+      </div>
+      <div class="team-member">
+        <img src="" alt="Team Member 5">
+        <h3>Anthony Mwani</h3>
+        <p>Software Engineer</p>
+      </div>
+      <div class="team-member">
+        <img src="" alt="Team Member 6">
+        <h3>Esther Mutheu</h3>
+        <p>Software Engineer</p>
+      </div>
+    </div>
+  </section>
 
-    // Toggle the active class on the sidebar
-    sidebar.classList.toggle("active");
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Galaxies Coders. All Rights Reserved.</p>
+  </footer>
 
-    // Toggle the hamburger and close icon
-    menuIcon.classList.toggle("fa-bars");
-    menuIcon.classList.toggle("fa-times");
-}
+  <script>
+   
 
-// Close the sidebar if the screen size is large enough
-window.addEventListener('resize', function() {
-    if (window.innerWidth > 768) {
+    // Set up WhatsApp click-to-chat
+    function setupWhatsAppLink() {
+      var phoneNumber = '+254753063168'; // Replace with your WhatsApp number (include country code without '+' sign)
+      var message = 'Hello, I would like to chat with you.';
+      var whatsappURL = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message);
+      var link = document.getElementById('whatsappLink');
+      link.setAttribute('href', whatsappURL);
+      link.setAttribute('target', '_blank');
+    }
+
+    // Existing sidebar and dropdown functions
+    function toggleDropdown(event) {
+      event.preventDefault();
+      const dropdown = event.target.closest('.dropdown');
+      if (dropdown) {
+        dropdown.classList.toggle('active');
+      }
+    }
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      const menuIcon = document.getElementById("menuIcon");
+      sidebar.classList.toggle("active");
+      menuIcon.classList.toggle("fa-bars");
+      menuIcon.classList.toggle("fa-times");
+    }
+
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
         const sidebar = document.getElementById("sidebar");
         const menuIcon = document.getElementById("menuIcon");
-        
-        // Remove the 'active' class to hide the sidebar
         sidebar.classList.remove("active");
-
-        // Reset the menu icon to its hamburger state
         menuIcon.classList.add("fa-bars");
         menuIcon.classList.remove("fa-times");
-    }
-});
+      }
+    });
 
-        window.onscroll = function() {
-        var header = document.querySelector("header");
-        if (window.scrollY > 0) {  // When scroll position is greater than 0
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
+    window.onscroll = function() {
+      var header = document.querySelector("header");
+      if (window.scrollY > 0) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
     };
-    
-    </script>
+
+    // Updated JavaScript
+window.onload = function() {
+  var modal = document.getElementById('welcomeModal');
+  var closeButton = document.querySelector('.close-button');
+  
+  // Show modal
+  modal.style.display = 'block';
+  
+  // Auto close after 30 seconds
+  setTimeout(function() {
+    modal.style.display = 'none';
+  }, 10000);
+  
+  // Close button click handler
+  closeButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    modal.style.display = 'none';
+  });
+  
+  // Click outside modal to close
+  window.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+  
+  // Setup WhatsApp link
+  setupWhatsAppLink();
+};
+  </script>
 </body>
 </html>

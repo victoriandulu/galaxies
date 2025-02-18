@@ -1055,7 +1055,7 @@ footer {
     color: #FFA500; /* Highlighted orange for icons */
     margin-bottom: 10px;
 }
-
+/* 
 .modal {
     display: none;
     position: fixed;
@@ -1086,7 +1086,7 @@ footer {
     right: 10px;
     font-size: 1.5rem;
     cursor: pointer;
-}
+} */
 /* EXPLAING THE SERVICES */
 
 #intro-services {
