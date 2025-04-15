@@ -6,6 +6,11 @@
     <title>Our History | Galaxies Coders</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+
+        
+       
+    
 </head>
 <body>
     <header>
@@ -25,32 +30,28 @@
                 <li><a href="industries.html">Industries Served</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-            
         </nav>
-        
     </header>
-      <!-- Sidebar for small screens -->
-<div id="sidebar" class="sidebar">
-    <a href="index.html" onclick="toggleSidebar()">Home</a>
-    
-    
-      <a href="about.html" onclick="toggleDropdown()">About Us</a>
-     
+
+    <!-- Sidebar for small screens -->
+    <div id="sidebar" class="sidebar">
+        <a href="index.html" onclick="toggleSidebar()">Home</a>
+        <a href="about.html" onclick="toggleDropdown()">About Us</a>
         <a href="history.html" onclick="toggleSidebar()">Our History</a>
-        <a href="mpos.html">POS Services</a>
-        <a href="services.html">All Services</a>
+        <a href="mpos.html" onclick="toggleSidebar()">POS Services</a>
+        <a href="services.html" onclick="toggleSidebar()">All Services</a>
+        <a href="industries.html" onclick="toggleSidebar()">Industries Served</a>
+        <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
+    </div>
 
-    <a href="industries.html" onclick="toggleSidebar()">Industries Served</a>
-    <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
-  </div>
-    <section id="history-about">
-
-    </section>
+    <!-- Hero Banner -->
+    <section id="history-about"></section>
 
     <!-- Our History Section -->
     <section id="history">
         <div class="history-item">
-            <div class="year">2019</div> <!-- Year above the vertical line -->
+            <div class="year">2019</div>
+            <div class="connector"></div>
             <div class="history-content">
                 <h2>Our Beginning</h2>
                 <p>
@@ -59,42 +60,34 @@
                 </p>
                 <a href="https://dev-learning.galaxiescoders.co/" target="_blank" class="btn-register">
                     Register for Tech Online Lessons
-                  </a>
+                </a>
             </div>
-            <div class="vertical-line"></div>
-            <div class="history-image">
-                <img src="" alt="History Image 1">
-            </div>
+            <div class="history-image"></div>
         </div>
     
-        <div class="history-item reverse">
-            <div class="year">2021</div> <!-- Year above the vertical line -->
+        <div class="history-item">
+            <div class="year">2021</div>
+            <div class="connector"></div>
+            <div class="history-image"></div>
             <div class="history-content">
                 <h2>Expanding into Hardware Services</h2>
                 <p>By 2021, we broadened our scope by introducing specialized hardware services to meet the growing needs of our clients. These services included CCTV installation, network data cabling and data points setup, Starlink internet installation, alarm system installation, server setup, and office phone system installation. Our commitment to delivering quality solutions established us as a trusted partner for businesses looking to enhance their technological infrastructure.</p>
-                
-            </div>
-            <div class="vertical-line"></div>
-            <div class="history-image">
-                <img src="" alt="History Image 2">
             </div>
         </div>
     
         <div class="history-item">
-            <div class="year">2024</div> <!-- Year above the vertical line -->
+            <div class="year">2024</div>
+            <div class="connector"></div>
             <div class="history-content">
                 <h2>Our Impact</h2>
                 <p>
                     Today, we are a leading software development company, impacting businesses across the globe with our cutting-edge solutions. In line with our commitment to fostering inclusivity and empowerment, we offer affordable tech lessons to young people, creating job opportunities and bridging the gender gap in technology. Our initiatives align with
-                     global efforts to promote employment opportunities for youth and women through vocational and technical training.</p>
+                     global efforts to promote employment opportunities for youth and women through vocational and technical training.
+                </p>
             </div>
-            <div class="vertical-line"></div>
-            <div class="history-image">
-                <img src="victoria-milly.png" alt="History Image 3">
-            </div>
+            <div class="history-image"></div>
         </div>
     </section>
-    
 
     <footer>
         <p>&copy; 2025 Galaxies Coders. All Rights Reserved.</p>
@@ -102,22 +95,20 @@
 
     <script>
         window.onscroll = function() {
-        var header = document.querySelector("header");
-        if (window.scrollY > 0) {  // When scroll position is greater than 0
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-    };
+            var header = document.querySelector("header");
+            if (window.scrollY > 0) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        };
+
         // Toggle the sidebar on mobile
         function toggleSidebar() {
             const sidebar = document.getElementById("sidebar");
             const menuIcon = document.getElementById("menuIcon");
 
-            // Toggle the active class on the sidebar
             sidebar.classList.toggle("active");
-
-            // Toggle the hamburger and close icon
             menuIcon.classList.toggle("fa-bars");
             menuIcon.classList.toggle("fa-times");
         }
@@ -128,10 +119,7 @@
                 const sidebar = document.getElementById("sidebar");
                 const menuIcon = document.getElementById("menuIcon");
                 
-                // Remove the 'active' class to hide the sidebar
                 sidebar.classList.remove("active");
-
-                // Reset the menu icon to its hamburger state
                 menuIcon.classList.add("fa-bars");
                 menuIcon.classList.remove("fa-times");
             }
