@@ -15,21 +15,27 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="about.html">About Us</a>
+                    <a href="about.html">About Us <i class="fas fa-caret-down"></i></a>
                     <ul class="dropdown-content">
                         <li><a href="history.html">Our History</a></li>
                         <li><a href="about.html#team">Our Team</a></li>
                         <li><a href="about.html#mission">Our Mission</a></li>
                     </ul>
                 </li>
-                <li><a href="services.html">Our Services</a></li>
-                
+                <li class="dropdown">
+                    <a href="services.html">Our Services <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="services.html">Software Services</a></li>
+                        <li><a href="mpos.html">MPOS Services</a></li>
+                        <li><a href="cctv.html">CCTV installation</a></li>
+                    </ul>
+                </li>
+                <li><a href="phones.html">Landline Installation</a></li>
                 <li><a href="industries.html">Industries Served</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
             
         </nav>
-        
     </header>
      <!-- Sidebar for small screens -->
 <div id="sidebar" class="sidebar">
@@ -40,7 +46,9 @@
      
         <a href="history.html" onclick="toggleSidebar()">Our History</a>
         <a href="mpos.html">POS Services</a>
-        <a href="services.html">All Services</a>
+        <a href="services.html">Our Services</a>
+        <a href="phone.html">Landline Installation</a>
+        <a href="cctv.html">CCTV Installation</a>
 
     <a href="industries.html" onclick="toggleSidebar()">Industries Served</a>
     <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
@@ -85,7 +93,7 @@
 
 
 
-
+<!-- INDUSTRIES -->
  <!-- Industries Served Section -->
  <section id="industries-served">
     <div class="section-content">
@@ -173,7 +181,7 @@
         
     </div>
 </section>
-
+<!-- SERVICES -->
 <section id="services" class="services-section">
     <div class="services-header">
         <h2 class="section-title">Our <span class="highlight">Services</span></h2>
@@ -305,7 +313,107 @@
     </div>
 </section>
 
+<!-- CCTV -->
+ <!-- CCTV Content -->
+ <section class="cctv-content">
+    <div class="cctv-container">
+        <h2>Our CCTV Services</h2>
+        <p>
+            At Galaxies Coders, we specialize in delivering state-of-the-art CCTV installations tailored to meet the unique security needs of our clients. Our experienced technicians ensure seamless integration with your existing infrastructure.
+        </p>
 
+        <div class="cctv-services">
+            <div class="service-box">
+                <i class="fas fa-video"></i>
+                <h3>Home Surveillance</h3>
+                <p>Monitor your home from anywhere with our HD camera systems.</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-building"></i>
+                <h3>Office Security</h3>
+                <p>Protect your business assets with our multi-camera office solutions.</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-network-wired"></i>
+                <h3>Remote Access</h3>
+                <p>Access live footage remotely via mobile or web platforms.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Enhanced Testimonials Section -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <div class="section-title">
+            <h2>Client Testimonials</h2>
+            <p>Don't just take our word for it—hear what our satisfied clients have to say about our premium CCTV installation services.</p>
+        </div>
+        <div class="testimonials-slider">
+            <div class="testimonials-track">
+                <div class="testimonial">
+                    <div class="client-info">
+                        <div class="client-img">
+                            <img src="/api/placeholder/100/100" alt="Client">
+                        </div>
+                        <div class="client-details">
+                            <h4>John Anderson</h4>
+                            <p>Residential Client</p>
+                        </div>
+                    </div>
+                    <div class="rating">★★★★★</div>
+                    <p>"SecureVision installed a complete security camera system at my home, and I couldn't be more satisfied. The technicians were professional, knowledgeable, and efficient. The quality of the cameras is excellent, and I now have peace of mind knowing my family and property are protected 24/7. Their mobile app makes it incredibly easy to check on my home when I'm away."</p>
+                </div>
+                <div class="testimonial">
+                    <div class="client-info">
+                        <div class="client-img">
+                            <img src="/api/placeholder/100/100" alt="Client">
+                        </div>
+                        <div class="client-details">
+                            <h4>Sarah Johnson</h4>
+                            <p>Small Business Owner</p>
+                        </div>
+                    </div>
+                    <div class="rating">★★★★★</div>
+                    <p>"After experiencing a break-in at my retail store, I knew I needed a robust security system. SecureVision delivered beyond my expectations. They assessed my property thoroughly and designed a comprehensive system that covers all vulnerable areas. Their team completed the installation with minimal disruption to my business operations, and the video quality is outstanding. Customer support has been exceptional whenever I've needed assistance."</p>
+                </div>
+                <div class="testimonial">
+                    <div class="client-info">
+                        <div class="client-img">
+                            <img src="/api/placeholder/100/100" alt="Client">
+                        </div>
+                        <div class="client-details">
+                            <h4>Michael Rodriguez</h4>
+                            <p>Property Manager</p>
+                        </div>
+                    </div>
+                    <div class="rating">★★★★★</div>
+                    <p>"Managing multiple properties requires reliable security solutions. SecureVision has been our go-to company for all our surveillance needs across our properties. Their team is always responsive, installations are clean and professional, and their after-service support is exceptional. The cloud storage options have made managing footage across multiple locations incredibly convenient. I highly recommend them to anyone looking for quality CCTV installation."</p>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to Enhance Your Security?</h2>
+            <p>Get in touch with our team today for a free consultation and quote. Protect what matters most with professional CCTV installation services tailored to your needs.</p>
+            <a href="#contact" class="btn">Request a Free Quote <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
 
   <!-- Mission Section -->
   <section id="mission">
