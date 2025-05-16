@@ -1379,7 +1379,7 @@ footer {
 
 .modal-content {
     background: linear-gradient(145deg, #000055, #000033);
-    color: white;
+    color: #000033;
     margin: 50px auto;
     width: 90%;
     max-width: 800px;
@@ -1415,8 +1415,9 @@ footer {
 
 .modal-header {
     padding: 30px;
-    background: linear-gradient(to right, rgba(0, 0, 70, 0.8), rgba(0, 0, 40, 0.8));
+    /* background: linear-gradient(to right, rgba(0, 0, 70, 0.8), rgba(0, 0, 40, 0.8)); */
     display: flex;
+   
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -1429,6 +1430,7 @@ footer {
 .modal-header h2 {
     font-size: 2rem;
     margin: 0;
+    color: white;
 }
 
 .modal-body {
