@@ -1,637 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Galaxies Coders</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="galaxies-logo (2).jpeg" type="image/jpeg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="description"
+        content="Galaxies Coders - Professional software development company. We invent, innovate, and inspire through cutting-edge technology solutions.">
+    <meta name="keywords"
+        content="software development, web development, mobile apps, UI/UX design, custom software, Galaxies Coders">
+    <meta name="author" content="Galaxies Coders">
+    <title>WE ARE Galaxies Coders - Invent. Innovate. Inspire.</title>
+    <link rel="stylesheet" href="css/style.css">
+      <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+
+    <!-- ========================================
+         HEADER & NAVIGATION
+    ======================================== -->
     <header>
         <nav>
-            <i id="menuIcon" class="fas fa-bars nav-toggle" onclick="toggleSidebar()"></i>
-            <ul>
+            <div class="logo logo-image">
+                <img src="images/logo.jpg" alt="Galaxies Coders">
+            </div>
+            <!-- Hamburger Menu Toggle (Hidden Checkbox) -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+            <!-- Hamburger Icon -->
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="about.html">About Us <i class="fas fa-caret-down"></i></a>
-                    <ul class="dropdown-content">
-                        <li><a href="history.html">Our History</a></li>
-                        <li><a href="about.html#team">Our Team</a></li>
-                        <!-- <li><a href="about.html#mission">Our Mission</a></li> -->
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="services.html">Our Services <i class="fas fa-caret-down"></i></a>
-                    <ul class="dropdown-content">
-                        <li><a href="services.html">Software Services</a></li>
-                        <li><a href="mpos.html">MPOS Services</a></li>
-                       <li><a href="phones.html">Landline Installation</a></li>
-                       <li><a href="biometric-doors.html">Biometric Doors</a></li>
-                       <li><a href="cctv.html">CCTV installation</a></li>
-                    </ul>
-                </li>
-                
-                <li><a href="industries.html">Industries Served</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Solutions</a></li>
+                <li><a href="clients.html">Clients</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" >Contact Us</a></li>
             </ul>
-            
         </nav>
-        
     </header>
-      <!-- Sidebar for small screens -->
-    <div id="sidebar" class="sidebar">
-    <a href="index.html" onclick="toggleSidebar()">Home</a>
-    
-    
-      <a href="about.html" onclick="toggleDropdown()">About Us</a>
-     
-        <!-- <a href="history.html" onclick="toggleSidebar()">Our History</a> -->
-        <a href="mpos.html">POS Services</a>
-        <a href="phones.html">Landline Installation</a>
-        <a href="services.html">Our Services</a>
-        <a href="phones.html">Landline Installation</a>
-        <a href="biometric-doors.html" onclick="toggleSidebar()">Biometric Doors</a>
-        <a href="cctv.html">CCTV Installation</a>
-    
-    <a href="industries.html" onclick="toggleSidebar()">Industries Served</a>
-    <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
-    </div>
-  
-    
-   <!-- Home Section with background video -->
-   <section id="home">
-    <div class="video-background">
-        <!-- Background Video -->
-        <video autoplay loop muted playsinline>
-            <source src="software.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        
-        <!-- Background Audio -->
-        <!-- <audio id="background-audio" loop>
-            <source src="about-galaxies.mp3" type="audio/mp3">
-            Your browser does not support the audio tag.
-        </audio> -->
-    </div>
-    
-    <div class="content">
-        <h1>Galaxies Coders</h1>
-        <p>Crafting innovative software solutions that transform your business vision into digital reality.</p>
-        
-        <div class="buttons">
-            <a href="services.html" class="btn btn-primary">Discover Our Services</a>
-            <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
-        </div>
-    </div>
-    
-   
-   
-    </div>
-    
-    <!-- Sound Control Button -->
-    <div class="sound-control" id="sound-toggle">
-        <i class="fas fa-volume-mute"></i>
-    </div>
-</section>
 
-
-
-<!-- INDUSTRIES -->
- <!-- Industries Served Section -->
- <section id="industries-served">
-    <div class="section-content">
-        <h2>Our Expertise</h2>
-        <p class="section-description">We've successfully delivered transformative technology solutions across multiple industries, helping businesses of all sizes achieve their digital transformation goals and stay ahead of the competition.</p>
-        
-        <div class="card-container">
-            <!-- Industry 1 -->
-            <div class="industry-card">
-                <div class="card-icon">
-                    <i class="fas fa-school fa-3x"></i>
-                </div>
-                <h3>Education</h3>
-                <p>Transforming learning experiences with intelligent educational platforms and school management systems.</p>
-            </div>
-            
-            <!-- Industry 2 -->
-            <div class="industry-card">
-                <div class="card-icon">
-                    <i class="fas fa-hotel fa-3x"></i>
-                </div>
-                <h3>Hospitality</h3>
-                <p>Elevating guest experiences through innovative property management and customer service solutions.</p>
-            </div>
-            
-            <!-- Industry 3 -->
-            <div class="industry-card">
-                <div class="card-icon">
-                    <i class="fas fa-book fa-3x"></i>
-                </div>
-                <h3>Retail</h3>
-                <p>Enhancing customer engagement and streamlining operations for bookshops and specialty retailers.</p>
-            </div>
-            
-            <!-- Industry 4 -->
-            <div class="industry-card">
-                <div class="card-icon">
-                    <i class="fas fa-wine-glass-alt fa-3x"></i>
-                </div>
-                <h3>Beverages</h3>
-                <p>Revolutionizing inventory management and distribution systems for the wines & spirits industry.</p>
-            </div>
-            
-          
-            <div class="industry-card">
-                <div class="card-icon">
-                    <i class="fas fa-shopping-cart fa-3x"></i>
-                </div>
-                <h3>E-Commerce</h3>
-                <p>Creating seamless online shopping experiences with custom e-commerce platforms and solutions.</p>
-            </div>
-            
-            <!-- Industry 8 -->
-            <div class="industry-card">
-                <div class="card-icon">
-                    <i class="fas fa-leaf fa-3x"></i>
-                </div>
-                <h3>Agriculture</h3>
-                <p>Modernizing farming operations with smart agriculture technology and resource management systems.</p>
+    <!-- ========================================
+         HERO SECTION
+    ======================================== -->
+   <section class="hero" 
+   style="background-image: url('images/hero-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="hero-content">
+            <h1>WE ARE GALAXIES CODERS</h1>
+            <p class="tagline">INVENT. INNOVATE. INSPIRE.</p>
+            <p>Transforming ideas into powerful digital solutions. We build cutting-edge software that drives your
+                business forward.</p>
+            <div>
+                <a href="contact.html" class="cta-button">Get Started</a>
+                <a href="portfolio.html" class="cta-button cta-button-outline">View Our Work</a>
             </div>
         </div>
-        
-        <!-- Count Section -->
-        <div class="count-section">
-            <div class="count-container">
-                <div class="count-item">
-                    <div class="count-number">50+</div>
-                    <div class="count-label">Projects Completed</div>
+    </section>
+
+    <!-- ========================================
+         SERVICES OVERVIEW SECTION
+    ======================================== -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Solutions</h2>
+            <p class="section-subtitle">Comprehensive software development services tailored to your needs</p>
+
+            <div class="cards-grid">
+                <!-- Service Card 1 -->
+                <div class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>Create stunning, responsive websites and web applications that engage your audience and deliver
+                        exceptional user experiences.</p>
                 </div>
-                <div class="count-item">
-                    <div class="count-number">85%</div>
-                    <div class="count-label">Repeat Clients</div>
+
+                <!-- Service Card 2 -->
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Mobile App Development</h3>
+                    <p>Build powerful native and cross-platform mobile applications for iOS and Android that users love.
+                    </p>
                 </div>
-                <div class="count-item">
-                    <div class="count-number">5+</div>
-                    <div class="count-label">Years Experience</div>
+
+                <!-- Service Card 3 -->
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>Custom Software</h3>
+                    <p>Develop bespoke software solutions designed specifically for your business processes and
+                        requirements.</p>
                 </div>
-                <div class="count-item">
-                    <div class="count-number">30+</div>
-                    <div class="count-label">Expert Developers</div>
+
+                <!-- Service Card 4 -->
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Design intuitive and beautiful user interfaces that enhance usability and create memorable
+                        digital experiences.</p>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="card">
+                    <div class="card-icon">☁️</div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Migrate and optimize your infrastructure with scalable cloud solutions that reduce costs and
+                        improve performance.</p>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3>Software Consulting</h3>
+                    <p>Get expert guidance on technology strategy, architecture decisions, and digital transformation
+                        initiatives.</p>
                 </div>
             </div>
-        </div>
-        
-        
-    </div>
-</section>
-<!-- SERVICES -->
-<section id="services" class="services-section">
-    <div class="services-header">
-        <h2 class="section-title">Our <span class="highlight">Services</span></h2>
-        <p class="section-subtitle">Innovative solutions tailored to your business needs</p>
-        <div class="section-divider">
-            <span class="divider-dot"></span>
-            <span class="divider-line"></span>
-            <span class="divider-dot"></span>
-        </div>
-    </div>
 
-    <div class="services-container">
-        <div class="service-card" onclick="openModal('webDev')">
-            <div class="service-icon-wrapper">
-                <i class="fas fa-code service-icon"></i>
-                <div class="icon-glow"></div>
-            </div>
-            <h3>Web Development</h3>
-            <p>Creating cutting-edge websites with responsive designs and optimal performance.</p>
-            <div class="card-overlay">
-                <span class="learn-more">Learn More</span>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="services.html" class="cta-button">View All Services</a>
             </div>
         </div>
+    </section>
 
-        <div class="service-card" onclick="openModal('mobileDev')">
-            <div class="service-icon-wrapper">
-                <i class="fas fa-mobile-alt service-icon"></i>
-                <div class="icon-glow"></div>
+
+    <!-- ========================================
+         FEATURED CLIENTS SECTION
+    ======================================== -->
+    <section class="section" style="background: var(--card-bg);">
+        <div class="container">
+            <h2 class="section-title">Trusted By Leading Companies</h2>
+            <p class="section-subtitle">We're proud to work with innovative organizations </p>
+
+            <div class="clients-grid">
+                <!-- Client Logo Placeholders -->
+                <div class="client-logo">
+                    <img src="images/clients/china-logo.png" alt="China Wu Yi Precast Kenya">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/osim-lodge.jpg" alt="Osim Counrty Lodge Narok">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/matioli-school.png" alt="Matioli Secondary School">
+                </div>
+                <!-- <div class="client-logo">
+                    <span style="color: var(--primary-cyan); font-weight: bold;">CLIENT 4</span>
+                </div>
+                <div class="client-logo">
+                    <span style="color: var(--primary-cyan); font-weight: bold;">CLIENT 5</span>
+                </div>
+                <div class="client-logo">
+                    <span style="color: var(--primary-cyan); font-weight: bold;">CLIENT 6</span>
+                </div> -->
             </div>
-            <h3>Mobile Development</h3>
-            <p>Building high-quality native and cross-platform apps for iOS and Android.</p>
-            <div class="card-overlay">
-                <span class="learn-more">Learn More</span>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="clients.html" class="cta-button">View All Clients</a>
             </div>
         </div>
+    </section>
 
-        <div class="service-card" onclick="openModal('uiux')">
-            <div class="service-icon-wrapper">
-                <i class="fas fa-paint-brush service-icon"></i>
-                <div class="icon-glow"></div>
-            </div>
-            <h3>UI/UX Design</h3>
-            <p>Designing user-friendly interfaces with intuitive navigation and seamless experiences.</p>
-            <div class="card-overlay">
-                <span class="learn-more">Learn More</span>
-            </div>
+    <!-- ========================================
+         CALL TO ACTION SECTION
+    ======================================== -->
+    <section class="section"
+        style="background: linear-gradient(135deg, var(--primary-cyan), var(--primary-blue)); padding: 5rem 0;">
+        <div class="container" style="text-align: center;">
+            <h2 style="font-size: 2.5rem; color: var(--dark-bg); margin-bottom: 1rem;">Ready to Start Your Project?</h2>
+            <p style="font-size: 1.2rem; color: var(--dark-bg); margin-bottom: 2rem;">Let's build something amazing
+                together. Get in touch with our team today.</p>
+            <a href="contact.html" class="cta-button"
+                style="background: var(--dark-bg); color: var(--primary-cyan);">Contact Us Now</a>
+            <a href="portfolio.html" class="cta-button cta-button-outline"
+                style="border-color: var(--dark-bg); color: var(--dark-bg);">View Portfolio</a>
         </div>
+    </section>
 
-        <div class="service-card featured-card" onclick="openModal('webApp')">
-            <div class="featured-badge">Featured</div>
-            <div class="service-icon-wrapper">
-                <i class="fas fa-laptop service-icon"></i>
-                <div class="icon-glow"></div>
-            </div>
-            <h3>Web Applications</h3>
-            <p>Creating robust, scalable and secure web applications for enterprise solutions.</p>
-            <div class="card-overlay">
-                <span class="learn-more">Learn More</span>
-            </div>
-        </div>
-
-        <div class="service-card" onclick="openModal('dataAnalysis')">
-            <div class="service-icon-wrapper">
-                <i class="fas fa-chart-line service-icon"></i>
-                <div class="icon-glow"></div>
-            </div>
-            <h3>Data Analysis</h3>
-            <p>Transforming raw data into actionable insights to drive strategic business decisions.</p>
-            <div class="card-overlay">
-                <span class="learn-more">Learn More</span>
-            </div>
-        </div>
-
-        <div class="service-card" onclick="openModal('cloudComputing')">
-            <div class="service-icon-wrapper">
-                <i class="fas fa-cloud service-icon"></i>
-                <div class="icon-glow"></div>
-            </div>
-            <h3>Cloud Computing</h3>
-            <p>Empowering your business with scalable, reliable cloud infrastructure solutions.</p>
-            <div class="card-overlay">
-                <span class="learn-more">Learn More</span>
-            </div>
-        </div>
-
-        <div class="service-card featured-card" onclick="openModal('aiSolutions')">
-            <div class="featured-badge">New</div>
-            <div class="service-icon-wrapper">
-                <i class="fas fa-robot service-icon"></i>
-                <div class="icon-glow"></div>
-            </div>
-            <h3>AI Solutions</h3>
-            <p>Integrating cutting-edge AI technologies to automate and enhance business processes.</p>
-            <div class="card-overlay">
-                <span class="learn-more">Learn More</span>
-            </div>
-        </div>
-
-        <div class="service-card" onclick="openModal('cybersecurity')">
-            <div class="service-icon-wrapper">
-                <i class="fas fa-shield-alt service-icon"></i>
-                <div class="icon-glow"></div>
-            </div>
-            <h3>Cybersecurity</h3>
-            <p>Protecting your digital assets with advanced security measures and monitoring.</p>
-            <div class="card-overlay">
-                <span class="learn-more">Learn More</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="services-cta">
-        <button class="cta-button">Request a Consultation</button>
-    </div>
-
-    <!-- Service Modal Structure -->
-    <div id="serviceModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-header">
-                <i id="modalIcon" class="fas service-icon"></i>
-                <h2 id="modalTitle"></h2>
-            </div>
-            <div class="modal-body" id="modalBody"></div>
-            <div class="modal-footer">
-                <button class="modal-cta">Get Started</button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CCTV -->
- <!-- CCTV Content -->
- <section class="cctv-content">
-    <div class="cctv-container">
-        <h2>Our CCTV Services</h2>
-        <p>
-            At Galaxies Coders, we specialize in delivering state-of-the-art CCTV installations tailored to meet the unique security needs of our clients. Our experienced technicians ensure seamless integration with your existing infrastructure.
-        </p>
-
-        <div class="cctv-services">
-            <div class="service-box">
-                <i class="fas fa-video"></i>
-                <h3>Home Surveillance</h3>
-                <p>Monitor your home from anywhere with our HD camera systems.</p>
-            </div>
-            <div class="service-box">
-                <i class="fas fa-building"></i>
-                <h3>Office Security</h3>
-                <p>Protect your business assets with our multi-camera office solutions.</p>
-            </div>
-            <div class="service-box">
-                <i class="fas fa-network-wired"></i>
-                <h3>Remote Access</h3>
-                <p>Access live footage remotely via mobile or web platforms.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Enhanced Testimonials Section -->
-<section class="testimonials" id="testimonials">
-    <div class="container">
-        <div class="section-title">
-            <h2>Client Testimonials</h2>
-            <p>Don't just take our word for it—hear what our satisfied clients have to say about our premium CCTV installation services.</p>
-        </div>
-        <div class="testimonials-slider">
-            <div class="testimonials-track">
-                <div class="testimonial">
-                    <div class="client-info">
-                        <div class="client-img">
-                            <img src="/api/placeholder/100/100" alt="Client">
-                        </div>
-                        <div class="client-details">
-                            <h4>John Anderson</h4>
-                            <p>Residential Client</p>
-                        </div>
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <h3>GALAXIES CODERS</h3>
+                    <p style="color: var(--text-gray); margin-bottom: 1rem;">Transforming ideas into powerful digital
+                        solutions. Invent. Innovate. Inspire.</p>
+                    <div class="social-links">
+                        <a href="https://api.whatsapp.com/send/?phone=254790352338&text&type=phone_number&app_absent=0" title="WhatsApp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCV3EdeD5jeRSp3ATclrMkDw" title="YouTube" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@galaxiescorders" title="TikTok" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.instagram.com/galaxiescoders6/" title="Instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://web.facebook.com/profile.php?id=61575680262788&_rdc=1&_rdr" title="Facebook" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
                     </div>
-                    <div class="rating">★★★★★</div>
-                    <p>"GalaxiesCoders installed a complete security camera system at my home, and I couldn't be more satisfied. The technicians were professional, knowledgeable, and efficient. The quality of the cameras is excellent, and I now have peace of mind knowing my family and property are protected 24/7. Their mobile app makes it incredibly easy to check on my home when I'm away."</p>
                 </div>
-                <div class="testimonial">
-                    <div class="client-info">
-                        <div class="client-img">
-                            <img src="/api/placeholder/100/100" alt="Client">
-                        </div>
-                        <div class="client-details">
-                            <h4>Sarah Johnson</h4>
-                            <p>Small Business Owner</p>
-                        </div>
-                    </div>
-                    <div class="rating">★★★★★</div>
-                    <p>"After experiencing a break-in at my retail store, I knew I needed a robust security system. GalaxiesCoders delivered beyond my expectations. They assessed my property thoroughly and designed a comprehensive system that covers all vulnerable areas. Their team completed the installation with minimal disruption to my business operations, and the video quality is outstanding. Customer support has been exceptional whenever I've needed assistance."</p>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
-                <div class="testimonial">
-                    <div class="client-info">
-                        <div class="client-img">
-                            <img src="/api/placeholder/100/100" alt="Client">
-                        </div>
-                        <div class="client-details">
-                            <h4>Michael Rodriguez</h4>
-                            <p>Property Manager</p>
-                        </div>
-                    </div>
-                    <div class="rating">★★★★★</div>
-                    <p>"Managing multiple properties requires reliable security solutions. GalaxiesCoders has been our go-to company for all our surveillance needs across our properties. Their team is always responsive, installations are clean and professional, and their after-service support is exceptional. The cloud storage options have made managing footage across multiple locations incredibly convenient. I highly recommend them to anyone looking for quality CCTV installation."</p>
+
+                <!-- Services -->
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html">Custom Software</a></li>
+                        <li><a href="services.html">Mobile Development</a></li>
+                        <li><a href="services.html">Websites</a></li>
+                        <li><a href="services.html">Web Applications</a></li>
+                        <li><a href="services.html">Consultations</a></li>
+                    </ul>
                 </div>
-            </div>
-            <div class="slider-nav">
-                <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
-                <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
-            </div>
-            <div class="dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Call to Action Section -->
-<section class="cta">
-    <div class="container">
-        <div class="cta-content">
-            <h2>Ready to Enhance Your Security?</h2>
-            <p>Get in touch with our team today for a free consultation and quote. Protect what matters most with professional CCTV installation services tailored to your needs.</p>
-            <a href="#contact" class="btn">Request a Free Quote <i class="fas fa-arrow-right"></i></a>
-        </div>
-    </div>
-</section>
-
-  <!-- Mission Section -->
-  <section id="mission">
-    <h2>Mission</h2>
-    <p>To empower young developers by providing them with opportunities to grow and learn, while creating innovative software solutions that address real-world challenges.</p>
-  </section>
-
-  <!-- Vision Section -->
-  <section id="vision">
-    <h2>Vision</h2>
-    <p>To become a leading technology company that nurtures young talent and fosters creativity and innovation in the software development field.</p>
-  </section>
-
-   <!-- Team Section -->
-  <section id="team">
-    <h2>Meet The Leadership Board</h2>
-    <div class="team-container">
-      <div class="team-member">
-        <!-- <img src="john-kaiser.jpeg" alt="Team Member 1"> -->
-        <h3>John Kaiser</h3>
-        <p>CTO & Founder</p>
-      </div>
-      <div class="team-member">
-        <!-- <img src="ndulu (2).png" alt="Team Member 2"> -->
-        <h3>Victoria Muithya</h3>
-        <p>CEO & Founder</p>
-      </div>
-      
-      <div class="team-member">
-        <!-- <img src="kibet.png" alt="Team Member 4"> -->
-        <h3>Emmanuel Kibet</h3>
-        <p>General Manager/Data Analyst</p>
-      </div>
-      <div class="team-member">
-        <img src="" alt="">
-        <h3>Bernard Wambua</h3>
-        <p>Marketing Manager</p>
-      </div>
-      <div class="team-member">
-        <img src="" alt="">
-        <h3>Lawrence Keya</h3>
-        <p>Networking Manager</p>
-      </div>
-
-      <div class="team-member">
-        <img src="" alt="Team Member 5">
-        <h3>Anthony Mwani</h3>
-        <p>Software Engineer</p>
-      </div>
-      <div class="team-member">
-        <img src="" alt="Team Member 6">
-        <h3>Esther Mutheu</h3>
-        <p>Software Engineer</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <div class="cta-section">
-    <div class="cta-content">
-        <h2>Ready to Transform Your Business?</h2>
-        <p>Let's discuss how our industry-specific expertise can help your organization thrive in the digital landscape. Our team is ready to develop custom solutions tailored to your unique needs.</p>
-        <a href="contact.html" class="cta-button">Get in Touch</a>
-    </div>
-</div>
-
-</div>
-
-   
-
-     <!-- Footer Section -->
-     <footer>
-        <div class="footer-container">
-            <!-- Quick Links -->
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="history.html">Our History</a></li>
-                    <li><a href="industries.html">Industries Served</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <!-- Services -->
-            <div class="footer-column">
-                <h3>Our Services</h3>
-                <ul>
-                    <li><a href="phones.html">Landline Installation</a></li>
-                    <li><a href="services.html">Software Services</a></li>
-                    <li><a href="mpos.html">MPOS Services</a></li>
-                    <li><a href="biometric-doors.html">Biometric Doors</a></li>
-                    <li><a href="cctv.html">CCTV Installation</a></li>
-                </ul>
-            </div>
-
-            <!-- Follow Us -->
-            <div class="footer-column">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="https://www.youtube.com/channel/UCV3EdeD5jeRSp3ATclrMkDw"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.tiktok.com/@galaxiescorders"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61575680262788"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/galaxiescoders6/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/254790352338" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li style="color: var(--text-gray);">📍 Nairobi, Kenya</li>
+                        <li style="color: var(--text-gray);">📧 galaxiescoders@gmail.com</li>
+                        <li style="color: var(--text-gray);">📱 +254 739 133 579</li>
+                        <li style="color: var(--text-gray);">🕒 Mon - Fri: 9AM - 6PM</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Contact Info -->
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:info@galaxiescoders.co" style="color: #ccc;">info@galaxiescoders.co</a></p>
-                <p>Phone: 254790352338 / +254753063168</p>
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Galaxies Coders. All Rights Reserved. | <a href="#"
+                        style="color: var(--primary-cyan);">Privacy Policy</a> | <a href="#"
+                        style="color: var(--primary-cyan);">Terms of Service</a></p>
             </div>
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <a href="#" class="up-button">↑</a>
-            &copy; 2025 GalaxiesCoders. All rights reserved.
         </div>
     </footer>
-    
 
+    <!-- Auto-update copyright year script -->
     <script>
-        
-    
-        // Toggle the visibility of the dropdown content
-        function toggleDropdown(event) {
-    event.preventDefault();
-    const dropdown = event.target.closest('.dropdown');
-    dropdown.classList.toggle('active');
-}
-
-        
-        // Toggle the sidebar on mobile
-function toggleSidebar() {
-    const sidebar = document.getElementById("sidebar");
-    const menuIcon = document.getElementById("menuIcon");
-
-    // Toggle the active class on the sidebar
-    sidebar.classList.toggle("active");
-
-    // Toggle the hamburger and close icon
-    menuIcon.classList.toggle("fa-bars");
-    menuIcon.classList.toggle("fa-times");
-}
-
-// Close the sidebar if the screen size is large enough
-window.addEventListener('resize', function() {
-    if (window.innerWidth > 768) {
-        const sidebar = document.getElementById("sidebar");
-        const menuIcon = document.getElementById("menuIcon");
-        
-        // Remove the 'active' class to hide the sidebar
-        sidebar.classList.remove("active");
-
-        // Reset the menu icon to its hamburger state
-        menuIcon.classList.add("fa-bars");
-        menuIcon.classList.remove("fa-times");
-    }
-});
-
-
-        let currentIndex = 0;
-        const slides = document.querySelectorAll('.slide');
-        const slider = document.querySelector('.slider');
-
-        function showNextSlide() {
-            currentIndex = (currentIndex + 1) % slides.length;
-            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-
-        setInterval(showNextSlide, 4000); // Change slide every 4 seconds
-
-        function openLearnMorePage() {
-    // Hide any other content (if you want to remove old content)
-    document.getElementById('learn-more-page').style.display = 'block';
-}
-
-
-window.onscroll = function() {
-        var header = document.querySelector("header");
-        if (window.scrollY > 0) {  // When scroll position is greater than 0
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-    };
-
-    window.addEventListener('load', function () {
-            const audio = document.getElementById('background-audio');
-
-            // Attempt to autoplay the audio
-            const playAudio = () => {
-                const playPromise = audio.play();
-
-                if (playPromise !== undefined) {
-                    playPromise.catch((error) => {
-                        console.warn("Autoplay blocked by browser:", error);
-
-                        // Retry playing the audio after user interaction
-                        document.addEventListener('click', playAudio, { once: true });
-                        document.addEventListener('keydown', playAudio, { once: true });
-                    });
-                }
-            };
-
-            playAudio(); // Attempt to play audio on load
-        });
-
-
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
+
 </body>
+
 </html>

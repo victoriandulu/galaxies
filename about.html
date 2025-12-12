@@ -1,372 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Galaxies Coders</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <style>
-    /* Modal Styles */
-    .modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px);
-}
-
-.modal-content {
-  background: rgba(255, 255, 255, 0.95);
-  margin: 15% auto;
-  padding: 25px;
-  border-radius: 15px;
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  animation: modalSlideIn 0.5s ease-out;
-}
-
-@keyframes modalSlideIn {
-  from { transform: translateY(-50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-.close-wrapper {
-  position: absolute;
-  top: 10px;
-  right: 5px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.close-button {
-  color: #000033;
-  font-size: 24px;
-  cursor: pointer;
-  line-height: 1;
-  display: block;
-  transition: color 0.3s ease;
-}
-
-.close-button:hover {
-  color: #666;
-}
-
-.modal-header h2 {
-  color: #333;
-  font-size: 1.8em;
-  margin-bottom: 15px;
-}
-
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  margin: 20px 0;
-}
-
-.feature-item {
-  padding: 10px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.feature-item i {
-  font-size: 24px;
-  color: #000033;
-  margin-bottom: 8px;
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 10px 25px;
-  background: #000033;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn about Galaxies Coders - A passionate team of young software developers committed to innovation and mentorship since 2023.">
+    <meta name="keywords" content="about galaxies coders, software development team, young developers, tech mentorship">
+    <meta name="author" content="Galaxies Coders">
+    <title>About Us - Galaxies Coders</title>
+    <link rel="stylesheet" href="css/style.css">
+      <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-  <header>
-    <nav>
-      <i id="menuIcon" class="fas fa-bars nav-toggle" onclick="toggleSidebar()"></i>
-      <ul>
-          <li><a href="index.html">Home</a></li>
-          <li class="dropdown">
-              <a href="about.html">About Us <i class="fas fa-caret-down"></i></a>
-              <ul class="dropdown-content">
-                  <!-- <li><a href="history.html">Our History</a></li> -->
-                  <li><a href="about.html#team">Our Team</a></li>
-                  <li><a href="about.html#mission">Our Mission</a></li>
-              </ul>
-          </li>
-          <li class="dropdown">
-              <a href="services.html">Our Services <i class="fas fa-caret-down"></i></a>
-              <ul class="dropdown-content">
-                <li><a href="services.html">Software Services</a></li>
-                <li><a href="mpos.html">MPOS Services</a></li>
-               <li><a href="phones.html">Landline Installation</a></li>
-               <li><a href="biometric-doors.html">Biometric Doors</a></li>
-               <li><a href="cctv.html">CCTV installation</a></li>
-              </ul>
-          </li>
-          
-          <li><a href="industries.html">Industries Served</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-      
-  </nav>
-  </header>
-  
-  <!-- Sidebar for small screens -->
-  <div id="sidebar" class="sidebar">
-    <a href="index.html" onclick="toggleSidebar()">Home</a>
-    <a href="about.html" onclick="toggleDropdown(event)">About Us</a>
-    <!-- <a href="history.html" onclick="toggleSidebar()">Our History</a> -->
-    <a href="mpos.html">POS Services</a>
-    <a href="services.html">Our Services</a>
-    <a href="cctv.html">CCTV Installation</a>
-    <a href="biometric-doors.html" onclick="toggleSidebar()">Biometric Doors</a>
-    <a href="phones.html">Landline Installation</a>
-    <a href="industries.html" onclick="toggleSidebar()">Industries Served</a>
-    <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
-  </div>
-  
-  <!-- Modal Popup -->
-  <!-- Modal HTML -->
-<div id="welcomeModal" class="modal">
-    <div class="modal-content">
-      <span class="close-button">&times;</span>
-      
-      <div class="modal-header">
-        <h2>Welcome to Galaxies Coders! 🚀</h2>
-      </div>
-  
-      <div class="modal-body">
-        <div class="feature-grid">
-          <div class="feature-item">
-            <i class="fas fa-code"></i>
-            <h3>Software Development</h3>
-          </div>
-          <div class="feature-item">
-            <i class="fas fa-mobile-alt"></i>
-            <h3>Mobile Apps</h3>
-          </div>
-        </div>
-      </div>
-  
-      <div class="modal-footer">
-        <a href="#" id="whatsappLink" class="cta-button">Chat With Us</a>
-      </div>
-    </div>
-  </div>
-      
-  
-  <!-- About Us Section -->
-  <section id="about">
-    <h3>About Us</h3>
-    <p>Founded in 2023, we are a group of passionate young software developers committed to providing innovative solutions to the tech industry. Our mission is to create opportunities for talented individuals and mentor the next generation of tech leaders.</p>
-  </section>
 
-  <!-- Mission Section -->
-  <section id="mission">
-    <h2>Mission</h2>
-    <p>To empower young developers by providing them with opportunities to grow and learn, while creating innovative software solutions that address real-world challenges.</p>
-  </section>
+    <!-- ========================================
+         HEADER & NAVIGATION
+    ======================================== -->
+    <header>
+        <nav>
+            <div class="logo logo-image">
+                <img src="images/logo.jpg" alt="Galaxies Coders">
+            </div>
 
-  <!-- Vision Section -->
-  <section id="vision">
-    <h2>Vision</h2>
-    <p>To become a leading technology company that nurtures young talent and fosters creativity and innovation in the software development field.</p>
-  </section>
+            <!-- Hamburger Menu Toggle (Hidden Checkbox) -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
-  <!-- Team Section -->
-  <section id="team">
-    <h2>Meet The Leadership Board</h2>
-    <div class="team-container">
-      <div class="team-member">
-        <!-- <img src="john-kaiser.jpeg" alt="Team Member 1"> -->
-        <h3>John Kaiser</h3>
-        <p>CTO & Founder</p>
-      </div>
-      <div class="team-member">
-        <!-- <img src="ndulu (2).png" alt="Team Member 2"> -->
-        <h3>Victoria Muithya</h3>
-        <p>CEO & Founder</p>
-      </div>
-      
-      <div class="team-member">
-        <!-- <img src="kibet.png" alt="Team Member 4"> -->
-        <h3>Emmanuel Kibet</h3>
-        <p>General Manager/Data Analyst</p>
-      </div>
-      <div class="team-member">
-        <img src="" alt="">
-        <h3>Bernard Wambua</h3>
-        <p>Marketing Manager</p>
-      </div>
-      <div class="team-member">
-        <img src="" alt="">
-        <h3>Lawrence Keya</h3>
-        <p>Networking Manager</p>
-      </div>
+            <!-- Hamburger Icon -->
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
-      <div class="team-member">
-        <img src="" alt="Team Member 5">
-        <h3>Anthony Mwani</h3>
-        <p>Software Engineer</p>
-      </div>
-      <div class="team-member">
-        <img src="" alt="Team Member 6">
-        <h3>Esther Mutheu</h3>
-        <p>Software Engineer</p>
-      </div>
-    </div>
-  </section>
-
-   <!-- Footer Section -->
-   <footer>
-    <div class="footer-container">
-        <!-- Quick Links -->
-        <div class="footer-column">
-            <h3>Quick Links</h3>
-            <ul>
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <!-- <li><a href="history.html">Our History</a></li> -->
-                <li><a href="industries.html">Industries Served</a></li>
+                <li><a href="services.html">Solutions</a></li>
+                <li><a href="clients.html">Clients</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-        </div>
+        </nav>
+    </header>
 
-        <!-- Services -->
-        <div class="footer-column">
-            <h3>Our Services</h3>
-            <ul>
-                <li><a href="phones.html">Landline Installation</a></li>
-                <li><a href="services.html">Software Services</a></li>
-                <li><a href="mpos.html">MPOS Services</a></li>
-                <li><a href="biometric-doors.html">Biometric Doors</a></li>
-                <li><a href="cctv.html">CCTV Installation</a></li>
-            </ul>
+    <!-- ========================================
+         PAGE HERO
+    ======================================== -->
+    <!-- <section class="hero" style="min-height: 50vh;">
+        <div class="hero-content">
+            <h1>About Us</h1>
+            <p class="tagline">OUR STORY</p>
+            <p>Empowering young developers to create innovative solutions</p>
         </div>
+    </section> -->
 
-        <!-- Follow Us -->
-        <div class="footer-column">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-                <a href="https://www.youtube.com/channel/UCV3EdeD5jeRSp3ATclrMkDw"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.tiktok.com/@galaxiescorders"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61575680262788"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/galaxiescoders6/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/254790352338" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <!-- ========================================
+         COMPANY STORY SECTION
+    ======================================== -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Who We Are</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.2rem; color: var(--text-light-gray); line-height: 1.8; margin-bottom: 2rem;">
+                    Founded in <span class="gradient-text" style="font-weight: bold;">2023</span>, Galaxies Coders Ltd
+                    was established with a vision to solve complex challenges through cutting-edge software. We
+                    specialize in creating tailored digital solutions that precisely meet the needs of users and drive
+                    tangible business results. By connecting innovative technology with practical application, we
+                    empower progress and create meaningful opportunities in the digital landscape.
+                </p>
             </div>
         </div>
+    </section>
 
-        <!-- Contact Info -->
-        <div class="footer-column">
-            <h3>Contact Us</h3>
-            <p>Email: <a href="mailto:info@galaxiescoders.co" style="color: #ccc;">info@galaxiescoders.co</a></p>
-            <p>Phone: 254790352338 / +254753063168</p>
+    <!-- ========================================
+         MISSION & VISION SECTION
+    ======================================== -->
+    <section class="section" style="background: var(--card-bg);">
+        <div class="container">
+            <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+
+                <!-- Mission Card -->
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Our Mission</h3>
+                    <p>To empower young developers by providing them with opportunities to grow and learn, while
+                        creating innovative software solutions that address real-world challenges.</p>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="card">
+                    <div class="card-icon">🌟</div>
+                    <h3>Our Vision</h3>
+                    <p>To become a leading technology company that nurtures young talent and fosters creativity and
+                        innovation in the software development field.</p>
+                </div>
+
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Footer Bottom -->
-    <div class="footer-bottom">
-        <a href="#" class="up-button">↑</a>
-        &copy; 2025 GalaxiesCoders. All rights reserved.
-    </div>
-</footer>
-  <script>
-   
+    <!-- ========================================
+         CORE VALUES SECTION
+    ======================================== -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Core Values</h2>
+            <p class="section-subtitle">The principles that guide everything we do</p>
 
-    // Set up WhatsApp click-to-chat
-    function setupWhatsAppLink() {
-      var phoneNumber = '+254753063168'; // Replace with your WhatsApp number (include country code without '+' sign)
-      var message = 'Hello, I would like to chat with you.';
-      var whatsappURL = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message);
-      var link = document.getElementById('whatsappLink');
-      link.setAttribute('href', whatsappURL);
-      link.setAttribute('target', '_blank');
-    }
+            <div class="cards-grid">
 
-    // Existing sidebar and dropdown functions
-    function toggleDropdown(event) {
-      event.preventDefault();
-      const dropdown = event.target.closest('.dropdown');
-      if (dropdown) {
-        dropdown.classList.toggle('active');
-      }
-    }
+                <!-- Value 1 -->
+                <div class="card">
+                    <div class="card-icon">💡</div>
+                    <h3>Innovation</h3>
+                    <p>We constantly push boundaries and explore new technologies to deliver cutting-edge solutions that
+                        exceed expectations.</p>
+                </div>
 
-    function toggleSidebar() {
-      const sidebar = document.getElementById("sidebar");
-      const menuIcon = document.getElementById("menuIcon");
-      sidebar.classList.toggle("active");
-      menuIcon.classList.toggle("fa-bars");
-      menuIcon.classList.toggle("fa-times");
-    }
+                <!-- Value 2 -->
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h3>Collaboration</h3>
+                    <p>We believe in the power of teamwork and foster a culture where ideas are shared freely and
+                        everyone's voice matters.</p>
+                </div>
 
-    window.addEventListener('resize', function() {
-      if (window.innerWidth > 768) {
-        const sidebar = document.getElementById("sidebar");
-        const menuIcon = document.getElementById("menuIcon");
-        sidebar.classList.remove("active");
-        menuIcon.classList.add("fa-bars");
-        menuIcon.classList.remove("fa-times");
-      }
-    });
+                <!-- Value 3 -->
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h3>Learning</h3>
+                    <p>We are committed to continuous learning and development, ensuring our team stays ahead in the
+                        ever-evolving tech landscape.</p>
+                </div>
 
-    window.onscroll = function() {
-      var header = document.querySelector("header");
-      if (window.scrollY > 0) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
-      }
-    };
+                <!-- Value 4 -->
+                <div class="card">
+                    <div class="card-icon">✨</div>
+                    <h3>Excellence</h3>
+                    <p>We maintain the highest standards in every project we undertake, delivering quality that speaks
+                        for itself.</p>
+                </div>
 
-    // Updated JavaScript
-window.onload = function() {
-  var modal = document.getElementById('welcomeModal');
-  var closeButton = document.querySelector('.close-button');
-  
-  // Show modal
-  modal.style.display = 'block';
-  
-  // Auto close after 30 seconds
-  setTimeout(function() {
-    modal.style.display = 'none';
-  }, 10000);
-  
-  // Close button click handler
-  closeButton.addEventListener('click', function(e) {
-    e.preventDefault();
-    modal.style.display = 'none';
-  });
-  
-  // Click outside modal to close
-  window.addEventListener('click', function(e) {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
-  
-  // Setup WhatsApp link
-  setupWhatsAppLink();
-};
-  </script>
+                <!-- Value 5 -->
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <h3>Impact</h3>
+                    <p>We create solutions that make a real difference, solving meaningful problems and contributing to
+                        technological advancement.</p>
+                </div>
+
+                <!-- Value 6 -->
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Growth</h3>
+                    <p>We invest in our people, providing mentorship and opportunities for young developers to realize
+                        their full potential.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         WHAT WE BELIEVE SECTION
+    ======================================== -->
+    <section class="section" style="background: var(--card-bg);">
+        <div class="container">
+            <h2 class="section-title">What We Believe</h2>
+            <div style="max-width: 900px; margin: 0 auto;">
+
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-cyan); margin-bottom: 1rem;">Empowering Youth</h3>
+                    <p>We believe that young developers have the potential to revolutionize the tech industry. By
+                        providing them with real opportunities and proper guidance, we help unlock their full potential.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-cyan); margin-bottom: 1rem;">Innovation Through Diversity</h3>
+                    <p>Fresh perspectives lead to breakthrough innovations. Our diverse team of young minds brings
+                        unique ideas and approaches to every project we undertake.</p>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: var(--primary-cyan); margin-bottom: 1rem;">Building the Future</h3>
+                    <p>Technology is the future, and we're committed to shaping it responsibly. Through mentorship and
+                        excellence, we're building the next generation of tech leaders who will drive innovation
+                        forward.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CALL TO ACTION SECTION
+    ======================================== -->
+    <section class="section"
+        style="background: linear-gradient(135deg, var(--primary-cyan), var(--primary-blue)); padding: 5rem 0;">
+        <div class="container" style="text-align: center;">
+            <h2 style="font-size: 2.5rem; color: var(--dark-bg); margin-bottom: 1rem;">Join Us on Our Journey</h2>
+            <p style="font-size: 1.2rem; color: var(--dark-bg); margin-bottom: 2rem;">Ready to work with a team that's
+                passionate about innovation and growth?</p>
+            <a href="contact.html" class="cta-button"
+                style="background: var(--dark-bg); color: var(--primary-cyan);">Get In Touch</a>
+            <a href="portfolio.html" class="cta-button cta-button-outline"
+                style="border-color: var(--dark-bg); color: var(--dark-bg);">See Our Work</a>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <h3>GALAXIES CODERS</h3>
+                    <p style="color: var(--text-gray); margin-bottom: 1rem;">Transforming ideas into powerful digital
+                        solutions. Invent. Innovate. Inspire.</p>
+                    <div class="social-links">
+                        <a href="https://api.whatsapp.com/send/?phone=254790352338&text&type=phone_number&app_absent=0" title="WhatsApp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCV3EdeD5jeRSp3ATclrMkDw" title="YouTube" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@galaxiescorders" title="TikTok" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.instagram.com/galaxiescoders6/" title="Instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://web.facebook.com/profile.php?id=61575680262788&_rdc=1&_rdr" title="Facebook" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html">Custom Software</a></li>
+                        <li><a href="services.html">Mobile Development</a></li>
+                        <li><a href="services.html">Websites</a></li>
+                        <li><a href="services.html">Web Applications</a></li>
+                        <li><a href="services.html">Consultations</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li style="color: var(--text-gray);">📍 Nairobi, Kenya</li>
+                        <li style="color: var(--text-gray);">📧 galaxiescoders@gmail.com</li>
+                        <li style="color: var(--text-gray);">📱 +254 739 133 579</li>
+                        <li style="color: var(--text-gray);">🕒 Mon - Fri: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Galaxies Coders. All Rights Reserved. | <a href="#"
+                        style="color: var(--primary-cyan);">Privacy Policy</a> | <a href="#"
+                        style="color: var(--primary-cyan);">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auto-update copyright year script -->
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
 </body>
+
 </html>

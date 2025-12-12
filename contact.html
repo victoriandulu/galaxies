@@ -1,219 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Galaxies Coders</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
-
-
+    <meta name="description"
+        content="Contact Galaxies Coders - Get in touch for custom software solutions, mobile apps, web development, and technology consultations.">
+    <meta name="keywords"
+        content="contact galaxies coders, software development inquiry, nairobi software company contact">
+    <meta name="author" content="Galaxies Coders">
+    <title>Contact Us - Galaxies Coders</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+
+    <!-- ========================================
+         HEADER & NAVIGATION
+    ======================================== -->
     <header>
         <nav>
-            <i id="menuIcon" class="fas fa-bars nav-toggle" onclick="toggleSidebar()"></i>
-            <ul>
+            <div class="logo logo-image">
+                <img src="images/logo.jpg" alt="Galaxies Coders">
+            </div>
+
+            <!-- Hamburger Menu Toggle (Hidden Checkbox) -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+            <!-- Hamburger Icon -->
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="about.html">About Us <i class="fas fa-caret-down"></i></a>
-                    <ul class="dropdown-content">
-                        <!-- <li><a href="history.html">Our History</a></li> -->
-                        <li><a href="about.html#team">Our Team</a></li>
-                        <li><a href="about.html#mission">Our Mission</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="services.html">Our Services <i class="fas fa-caret-down"></i></a>
-                    <ul class="dropdown-content">
-                        <li><a href="services.html">Software Services</a></li>
-                        <li><a href="mpos.html">MPOS Services</a></li>
-                       <li><a href="phones.html">Landline Installation</a></li>
-                       <li><a href="biometric-doors.html">Biometric Doors</a></li>
-                       <li><a href="cctv.html">CCTV installation</a></li>
-                    </ul>
-                </li>
-                
-                <li><a href="industries.html">Industries Served</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Solutions</a></li>
+                <li><a href="clients.html">Clients</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" >Contact Us</a></li>
             </ul>
-            
         </nav>
-        
     </header>
-      <!-- Sidebar for small screens -->
-    <div id="sidebar" class="sidebar">
-    <a href="index.html" onclick="toggleSidebar()">Home</a>
-    
-    
-      <a href="about.html" onclick="toggleDropdown()">About Us</a>
-     
-        <!-- <a href="history.html" onclick="toggleSidebar()">Our History</a> -->
-        <a href="mpos.html">POS Services</a>
-        <a href="phones.html">Landline Installation</a>
-        <a href="services.html">Our Services</a>
-        <a href="phones.html">Landline Installation</a>
-        <a href="biometric-doors.html" onclick="toggleSidebar()">Biometric Doors</a>
-        <a href="cctv.html">CCTV Installation</a>
-    
-    <a href="industries.html" onclick="toggleSidebar()">Industries Served</a>
-    <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
-    </div>
-    <!-- Explanation Section (Blue Background) -->
-    <section id="explanation">
-        <div class="content">
-            <h2>Get In Touch With Us</h2>
-            
+
+    <!-- ========================================
+         PAGE HERO
+    ======================================== -->
+    <section class="hero" style="min-height: 50vh;">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p class="tagline">LET'S TALK</p>
+            <p>Ready to start your project? We're here to help</p>
         </div>
     </section>
-    
-    <!-- Contact Us Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>For any enquires, kindly fill out the form below:</p>
-        <form class="contact-form" id="contact-form">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+
+    <!-- ========================================
+         CONTACT INTRODUCTION
+    ======================================== -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.2rem; color: var(--text-light-gray); line-height: 1.8; margin-bottom: 2rem;">
+                    Have a project in mind? Need a <span class="gradient-text" style="font-weight: bold;">custom
+                        software solution</span>? We'd love to hear from you. Fill out the form below or reach out
+                    through any of our contact channels, and we'll get back to you as soon as possible.
+                </p>
             </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Submit</button>
-        </form>
+        </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-container">
-            <!-- Quick Links -->
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <!-- <li><a href="history.html">Our History</a></li> -->
-                    <li><a href="industries.html">Industries Served</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
+    <!-- ========================================
+         CONTACT FORM & INFO SECTION
+    ======================================== -->
+    <section class="section" style="background: var(--card-bg);">
+        <div class="container">
+            <div class="contact-container">
 
-            <!-- Services -->
-            <div class="footer-column">
-                <h3>Our Services</h3>
-                <ul>
-                    <li><a href="phones.html">Landline Installation</a></li>
-                    <li><a href="services.html">Software Services</a></li>
-                    <li><a href="mpos.html">MPOS Services</a></li>
-                    <li><a href="biometric-doors.html">Biometric Doors</a></li>
-                    <li><a href="cctv.html">CCTV Installation</a></li>
-                </ul>
-            </div>
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3 style="color: var(--primary-cyan); margin-bottom: 1.5rem; font-size: 1.8rem;">Send Us a Message
+                    </h3>
 
-            <!-- Follow Us -->
-            <div class="footer-column">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="https://www.youtube.com/channel/UCV3EdeD5jeRSp3ATclrMkDw"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.tiktok.com/@galaxiescorders"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61575680262788"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/galaxiescoders6/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/254790352338" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <form action="#" method="POST">
+
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+254 XXX XXX XXX">
+                        </div>
+
+                        <!-- Company Name -->
+                        <div class="form-group">
+                            <label for="company">Company/Organization</label>
+                            <input type="text" id="company" name="company" placeholder="Your company name">
+                        </div>
+
+                        <!-- Project Type -->
+                        <div class="form-group">
+                            <label for="project-type">Project Type *</label>
+                            <select id="project-type" name="project-type" required>
+                                <option value="">-- Select Project Type --</option>
+                                <option value="custom-software">Custom Software Development</option>
+                                <option value="mobile-app">Mobile App Development</option>
+                                <option value="website">Website Development</option>
+                                <option value="web-app">Web Application</option>
+                                <option value="consultation">Technology Consultation</option>
+                                <option value="maintenance">Maintenance & Support</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Budget Range -->
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">-- Select Budget Range --</option>
+                                <option value="less-100k">Less than KSh 100,000</option>
+                                <option value="100k-500k">KSh 100,000 - 500,000</option>
+                                <option value="500k-1m">KSh 500,000 - 1,000,000</option>
+                                <option value="1m-plus">KSh 1,000,000+</option>
+                                <option value="flexible">Flexible / Not Sure</option>
+                            </select>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-group">
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="message" required
+                                placeholder="Tell us about your project, requirements, timeline, and any specific features you need..."></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-btn">Send Message</button>
+
+                        <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 1rem; text-align: center;">
+                            * Required fields
+                        </p>
+
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+
+                    <!-- Office Location -->
+                    <div class="info-box">
+                        <h3>📍 Our Office</h3>
+                        <p>Nairobi, Kenya</p>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">We serve clients across Kenya and
+                            internationally</p>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="info-box">
+                        <h3>📧 Email Us</h3>
+                        <p>galaxiescoders@gmail.com</p>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">We typically respond within 24 hours</p>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="info-box">
+                        <h3>📱 Call Us</h3>
+                        <p>+254 90352338</p>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Available during business hours</p>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div class="info-box">
+                        <h3>🕒 Business Hours</h3>
+                        <p>Monday - Friday</p>
+                        <p style="font-weight: bold;">9:00 AM - 6:00 PM (EAT)</p>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Closed on weekends and public holidays</p>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="info-box">
+                        <h3>🌐 Connect With Us</h3>
+                        <p style="margin-bottom: 1rem;">Follow us on social media</p>
+                        <div class="social-links">
+                            <a href="https://api.whatsapp.com/send/?phone=254790352338&text&type=phone_number&app_absent=0" title="WhatsApp" target="_blank"
+                                style="background: #25D366; color: white; font-weight: bold;">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCV3EdeD5jeRSp3ATclrMkDw" title="YouTube" target="_blank"
+                                style="background: #FF0000; color: white; font-weight: bold;">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@galaxiescorders" title="TikTok" target="_blank"
+                                style="background: #000000; color: white; font-weight: bold;">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="https://www.instagram.com/galaxiescoders6/" title="Instagram" target="_blank"
+                                style="background: #E4405F; color: white; font-weight: bold;">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://web.facebook.com/profile.php?id=61575680262788&_rdc=1&_rdr" title="Facebook" target="_blank"
+                                style="background: #1877F2; color: white; font-weight: bold;">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+     FAQ SECTION
+======================================== -->
+<section class="section" style="background: var(--card-bg);">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Quick answers to common questions</p>
+
+        <div class="faq-container" style="max-width: 900px; margin: 0 auto;">
+            
+            <!-- FAQ 1 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How long does it take to develop a custom software?</h3>
+                    <span class="faq-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="faq-answer">
+                    <p>Development time varies based on project complexity. Simple systems take 2-4 weeks, while complex enterprise solutions may take 2-3 months. We'll provide a detailed timeline after understanding your requirements.</p>
                 </div>
             </div>
 
-            <!-- Contact Info -->
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:info@galaxiescoders.co" style="color: #ccc;">info@galaxiescoders.co</a></p>
-                <p>Phone: 254790352338 / +254753063168</p>
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you offer post-deployment support?</h3>
+                    <span class="faq-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We provide comprehensive maintenance and support services including bug fixes, updates, security patches, and feature enhancements. Support packages are available based on your needs.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can you customize existing systems?</h3>
+                    <span class="faq-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! We can customize and enhance existing software systems, integrate new features, and optimize performance based on your evolving business needs.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What are your payment terms?</h3>
+                    <span class="faq-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="faq-answer">
+                    <p>We typically work with milestone-based payments: initial deposit at project start, progress payments at key milestones, and final payment upon delivery. Custom payment plans are available for larger projects.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you work with clients outside Kenya?</h3>
+                    <span class="faq-toggle">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! While we're based in Nairobi, we serve clients across Kenya and internationally. We use modern communication tools to ensure seamless collaboration regardless of location.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ========================================
+         CALL TO ACTION SECTION
+    ======================================== -->
+    <section class="section"
+        style="background: linear-gradient(135deg, var(--primary-cyan), var(--primary-blue)); padding: 5rem 0;">
+        <div class="container" style="text-align: center;">
+            <h2 style="font-size: 2.5rem; color: var(--dark-bg); margin-bottom: 1rem;">Ready to Transform Your Business?
+            </h2>
+            <p style="font-size: 1.2rem; color: var(--dark-bg); margin-bottom: 2rem;">Let's discuss how we can help you
+                achieve your technology goals.</p>
+            <a href="#" style="background: var(--dark-bg); color: var(--primary-cyan);" class="cta-button"
+                onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Contact Us Now</a>
+            <a href="portfolio.html" class="cta-button cta-button-outline"
+                style="border-color: var(--dark-bg); color: var(--dark-bg);">View Our Work</a>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <h3>GALAXIES CODERS</h3>
+                    <p style="color: var(--text-gray); margin-bottom: 1rem;">Transforming ideas into powerful digital
+                        solutions. Invent. Innovate. Inspire.</p>
+                    <div class="social-links">
+                        <a href="https://api.whatsapp.com/send/?phone=254790352338&text&type=phone_number&app_absent=0" title="WhatsApp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCV3EdeD5jeRSp3ATclrMkDw" title="YouTube" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@galaxiescorders" title="TikTok" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.instagram.com/galaxiescoders6/" title="Instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://web.facebook.com/profile.php?id=61575680262788&_rdc=1&_rdr" title="Facebook" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html">Custom Software</a></li>
+                        <li><a href="services.html">Mobile Development</a></li>
+                        <li><a href="services.html">Websites</a></li>
+                        <li><a href="services.html">Web Applications</a></li>
+                        <li><a href="services.html">Consultations</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li style="color: var(--text-gray);">📍 Nairobi, Kenya</li>
+                        <li style="color: var(--text-gray);">📧 galaxiescoders@gmail.com</li>
+                        <li style="color: var(--text-gray);">📱 +254 739 133 579</li>
+                        <li style="color: var(--text-gray);">🕒 Mon - Fri: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Galaxies Coders. All Rights Reserved. | <a href="#"
+                        style="color: var(--primary-cyan);">Privacy Policy</a> | <a href="#"
+                        style="color: var(--primary-cyan);">Terms of Service</a></p>
             </div>
         </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <a href="#" class="up-button">↑</a>
-            &copy; 2025 GalaxiesCoders. All rights reserved.
-        </div>
     </footer>
-      <!-- EmailJS Integration -->
-      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
+    <!-- Auto-update copyright year script -->
     <script>
-      
-        // Toggle the visibility of the dropdown content
-function toggleDropdown(event) {
-    event.preventDefault();
-    const dropdown = event.target.closest('.dropdown');
-    dropdown.classList.toggle('active');
-}
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
+
+        // FAQ Dropdown Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
         
-        // Toggle the sidebar on mobile
-function toggleSidebar() {
-    const sidebar = document.getElementById("sidebar");
-    const menuIcon = document.getElementById("menuIcon");
-
-    // Toggle the active class on the sidebar
-    sidebar.classList.toggle("active");
-
-    // Toggle the hamburger and close icon
-    menuIcon.classList.toggle("fa-bars");
-    menuIcon.classList.toggle("fa-times");
-}
-
-// Close the sidebar if the screen size is large enough
-window.addEventListener('resize', function() {
-    if (window.innerWidth > 768) {
-        const sidebar = document.getElementById("sidebar");
-        const menuIcon = document.getElementById("menuIcon");
-        
-        // Remove the 'active' class to hide the sidebar
-        sidebar.classList.remove("active");
-
-        // Reset the menu icon to its hamburger state
-        menuIcon.classList.add("fa-bars");
-        menuIcon.classList.remove("fa-times");
-    }
-});
-
-        (function(){
-            emailjs.init("PLlXKBc-lreGCE27Q"); // replace with your actual user ID
-        })();
-        
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
             
-            const templateParams = {
-                from_name: document.getElementById('name').value,
-                from_email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
-
-            emailjs.send('service_mgyimiy', 'template_eirf7kw', templateParams)
-                .then(function(response) {
-                    alert('Message sent successfully!');
-                    document.getElementById('contact-form').reset(); // Reset the form after submission
-                }, function(error) {
-                    alert('Error sending message: ', error);
+            question.addEventListener('click', () => {
+                // Close all other FAQ items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
                 });
+                
+                // Toggle current FAQ item
+                item.classList.toggle('active');
+            });
         });
-        window.onscroll = function() {
-        var header = document.querySelector("header");
-        if (window.scrollY > 0) {  // When scroll position is greater than 0
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-    };
-    
+        
+        // Optional: Open first FAQ by default
+        faqItems[0].classList.add('active');
+    });
     </script>
+
 </body>
+
 </html>

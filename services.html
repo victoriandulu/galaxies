@@ -1,713 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Galaxies Coders</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-  
+    <meta name="description"
+        content="Galaxies Coders Solutions - Custom Software, Mobile Development, Websites, Web Apps, and Technology Consultations.">
+    <meta name="keywords"
+        content="custom software, mobile app development, web development, web apps, tech consulting, software solutions">
+    <meta name="author" content="Galaxies Coders">
+    <title>Our Solutions - Galaxies Coders</title>
+    <link rel="stylesheet" href="css/style.css">
+      <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+
+    <!-- ========================================
+         HEADER & NAVIGATION
+    ======================================== -->
     <header>
         <nav>
-            <i id="menuIcon" class="fas fa-bars nav-toggle" onclick="toggleSidebar()"></i>
-            <ul>
+            <div class="logo logo-image">
+                <img src="images/logo.jpg" alt="Galaxies Coders">
+            </div>
+
+            <!-- Hamburger Menu Toggle (Hidden Checkbox) -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+            <!-- Hamburger Icon -->
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="about.html">About Us <i class="fas fa-caret-down"></i></a>
-                    <ul class="dropdown-content">
-                        <!-- <li><a href="history.html">Our History</a></li> -->
-                        <li><a href="about.html#team">Our Team</a></li>
-                        <li><a href="about.html#mission">Our Mission</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="services.html">Our Services <i class="fas fa-caret-down"></i></a>
-                    <ul class="dropdown-content">
-                        <li><a href="services.html">Software Services</a></li>
-                        <li><a href="mpos.html">MPOS Services</a></li>
-                       <li><a href="phones.html">Landline Installation</a></li>
-                       <li><a href="biometric-doors.html">Biometric Doors</a></li>
-                       <li><a href="cctv.html">CCTV installation</a></li>
-                    </ul>
-                </li>
-                
-                <li><a href="industries.html">Industries Served</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Solutions</a></li>
+                <li><a href="clients.html">Clients</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
-            
         </nav>
-        
     </header>
-      <!-- Sidebar for small screens -->
-    <div id="sidebar" class="sidebar">
-    <a href="index.html" onclick="toggleSidebar()">Home</a>
-    
-    
-      <a href="about.html" onclick="toggleDropdown()">About Us</a>
-     
-        <!-- <a href="history.html" onclick="toggleSidebar()">Our History</a> -->
-        <a href="mpos.html">POS Services</a>
-        <a href="phones.html">Landline Installation</a>
-        <a href="services.html">Our Services</a>
-        <a href="phones.html">Landline Installation</a>
-        <a href="biometric-doors.html" onclick="toggleSidebar()">Biometric Doors</a>
-        <a href="cctv.html">CCTV Installation</a>
-    
-    <a href="industries.html" onclick="toggleSidebar()">Industries Served</a>
-    <a href="contact.html" onclick="toggleSidebar()">Contact Us</a>
-    </div>
-    <section id="services" class="services-section">
-        <div class="services-header">
-            <h2 class="section-title">Our <span class="highlight">Services</span></h2>
-            <p class="section-subtitle">Innovative solutions tailored to your business needs</p>
-            <div class="section-divider">
-                <span class="divider-dot"></span>
-                <span class="divider-line"></span>
-                <span class="divider-dot"></span>
-            </div>
+
+    <!-- ========================================
+         PAGE HERO
+    ======================================== -->
+    <!-- <section class="hero" style="min-height: 50vh;">
+        <div class="hero-content">
+            <h1>Our Solutions</h1>
+            <p class="tagline">WHAT WE OFFER</p>
+            <p>Comprehensive software solutions tailored to your business needs</p>
         </div>
-    
-        <div class="services-container">
-            <div class="service-card" onclick="openModal('webDev')">
-                <div class="service-icon-wrapper">
-                    <i class="fas fa-code service-icon"></i>
-                    <div class="icon-glow"></div>
-                </div>
-                <h3>Web Development</h3>
-                <p>Creating cutting-edge websites with responsive designs and optimal performance.</p>
-                <div class="card-overlay">
-                    <span class="learn-more">Learn More</span>
-                </div>
-            </div>
-    
-            <div class="service-card" onclick="openModal('mobileDev')">
-                <div class="service-icon-wrapper">
-                    <i class="fas fa-mobile-alt service-icon"></i>
-                    <div class="icon-glow"></div>
-                </div>
-                <h3>Mobile Development</h3>
-                <p>Building high-quality native and cross-platform apps for iOS and Android.</p>
-                <div class="card-overlay">
-                    <span class="learn-more">Learn More</span>
-                </div>
-            </div>
-    
-            <div class="service-card" onclick="openModal('uiux')">
-                <div class="service-icon-wrapper">
-                    <i class="fas fa-paint-brush service-icon"></i>
-                    <div class="icon-glow"></div>
-                </div>
-                <h3>UI/UX Design</h3>
-                <p>Designing user-friendly interfaces with intuitive navigation and seamless experiences.</p>
-                <div class="card-overlay">
-                    <span class="learn-more">Learn More</span>
-                </div>
-            </div>
-    
-            <div class="service-card featured-card" onclick="openModal('webApp')">
-                <div class="featured-badge">Featured</div>
-                <div class="service-icon-wrapper">
-                    <i class="fas fa-laptop service-icon"></i>
-                    <div class="icon-glow"></div>
-                </div>
-                <h3>Web Applications</h3>
-                <p>Creating robust, scalable and secure web applications for enterprise solutions.</p>
-                <div class="card-overlay">
-                    <span class="learn-more">Learn More</span>
-                </div>
-            </div>
-    
-            <div class="service-card" onclick="openModal('dataAnalysis')">
-                <div class="service-icon-wrapper">
-                    <i class="fas fa-chart-line service-icon"></i>
-                    <div class="icon-glow"></div>
-                </div>
-                <h3>Data Analysis</h3>
-                <p>Transforming raw data into actionable insights to drive strategic business decisions.</p>
-                <div class="card-overlay">
-                    <span class="learn-more">Learn More</span>
-                </div>
-            </div>
-    
-            <div class="service-card" onclick="openModal('cloudComputing')">
-                <div class="service-icon-wrapper">
-                    <i class="fas fa-cloud service-icon"></i>
-                    <div class="icon-glow"></div>
-                </div>
-                <h3>Cloud Computing</h3>
-                <p>Empowering your business with scalable, reliable cloud infrastructure solutions.</p>
-                <div class="card-overlay">
-                    <span class="learn-more">Learn More</span>
-                </div>
-            </div>
-    
-            <div class="service-card featured-card" onclick="openModal('aiSolutions')">
-                <div class="featured-badge">New</div>
-                <div class="service-icon-wrapper">
-                    <i class="fas fa-robot service-icon"></i>
-                    <div class="icon-glow"></div>
-                </div>
-                <h3>AI Solutions</h3>
-                <p>Integrating cutting-edge AI technologies to automate and enhance business processes.</p>
-                <div class="card-overlay">
-                    <span class="learn-more">Learn More</span>
-                </div>
-            </div>
-    
-            <div class="service-card" onclick="openModal('cybersecurity')">
-                <div class="service-icon-wrapper">
-                    <i class="fas fa-shield-alt service-icon"></i>
-                    <div class="icon-glow"></div>
-                </div>
-                <h3>Cybersecurity</h3>
-                <p>Protecting your digital assets with advanced security measures and monitoring.</p>
-                <div class="card-overlay">
-                    <span class="learn-more">Learn More</span>
-                </div>
-            </div>
-        </div>
-    
-        <div class="services-cta">
-            <button class="cta-button">Request a Consultation</button>
-        </div>
-    
-        <!-- Service Modal Structure -->
-        <div id="serviceModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <div class="modal-header">
-                    <i id="modalIcon" class="fas service-icon"></i>
-                    <h2 id="modalTitle"></h2>
-                </div>
-                <div class="modal-body" id="modalBody"></div>
-                <div class="modal-footer">
-                    <button class="modal-cta">Get Started</button>
-                </div>
+    </section> -->
+
+    <!-- ========================================
+         INTRODUCTION SECTION
+    ======================================== -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Transform Your Ideas Into Reality</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.2rem; color: var(--text-light-gray); line-height: 1.8; margin-bottom: 2rem;">
+                    At Galaxies Coders, we specialize in delivering <span class="gradient-text"
+                        style="font-weight: bold;">custom software solutions</span> that drive business growth. From
+                    mobile applications to enterprise web platforms, our team of passionate young developers brings
+                    innovation and expertise to every project.
+                </p>
             </div>
         </div>
     </section>
 
-   
-  <!-- Footer Section -->
-  <footer>
-    <div class="footer-container">
-        <!-- Quick Links -->
-        <div class="footer-column">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <!-- <li><a href="history.html">Our History</a></li> -->
-                <li><a href="industries.html">Industries Served</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
+    <!-- ========================================
+         MAIN SERVICES SECTION
+    ======================================== -->
+    <section class="section" style="background: var(--card-bg);">
+        <div class="container">
+            <h2 class="section-title">Our Core Services</h2>
+            <p class="section-subtitle">End-to-end software development services</p>
 
-        <!-- Services -->
-        <div class="footer-column">
-            <h3>Our Services</h3>
-            <ul>
-                <li><a href="phones.html">Landline Installation</a></li>
-                <li><a href="services.html">Software Services</a></li>
-                <li><a href="mpos.html">MPOS Services</a></li>
-                <li><a href="biometric-doors.html">Biometric Doors</a></li>
-                <li><a href="cctv.html">CCTV Installation</a></li>
-            </ul>
-        </div>
+            <div class="cards-grid">
 
-        <!-- Follow Us -->
-        <div class="footer-column">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-                <a href="https://www.youtube.com/channel/UCV3EdeD5jeRSp3ATclrMkDw"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.tiktok.com/@galaxiescorders"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61575680262788"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/galaxiescoders6/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/254790352338" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <!-- Service 1: Custom Software Solutions -->
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>Custom Software Solutions</h3>
+                    <p>We build tailor-made software applications designed specifically for your business processes and
+                        requirements. From enterprise systems to specialized tools, we create solutions that fit
+                        perfectly into your workflow.</p>
+                    <ul style="margin-top: 1rem; color: var(--text-gray); line-height: 2;">
+                        <li>✓ Business Process Automation</li>
+                        <li>✓ Enterprise Resource Planning (ERP)</li>
+                        <li>✓ Customer Relationship Management (CRM)</li>
+                        <li>✓ Inventory Management Systems</li>
+                        <li>✓ Custom APIs & Integrations</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Mobile Development -->
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Mobile Development</h3>
+                    <p>Create powerful, user-friendly mobile applications for iOS and Android. We build native and
+                        cross-platform apps that deliver exceptional performance and engage your users on the go.</p>
+                    <ul style="margin-top: 1rem; color: var(--text-gray); line-height: 2;">
+                        <li>✓ Native iOS Development (Swift)</li>
+                        <li>✓ Native Android Development (Kotlin/Java)</li>
+                        <li>✓ Cross-Platform Apps (React Native, Flutter)</li>
+                        <li>✓ Mobile UI/UX Design</li>
+                        <li>✓ App Store Optimization & Deployment</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: Websites -->
+                <div class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Website Development</h3>
+                    <p>Build stunning, responsive websites that captivate your audience and drive conversions. From
+                        corporate websites to e-commerce platforms, we create digital experiences that leave lasting
+                        impressions.</p>
+                    <ul style="margin-top: 1rem; color: var(--text-gray); line-height: 2;">
+                        <li>✓ Corporate Websites</li>
+                        <li>✓ E-commerce Platforms</li>
+                        <li>✓ Landing Pages</li>
+                        <li>✓ Portfolio & Blog Websites</li>
+                        <li>✓ SEO Optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4: Web Applications -->
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Web Applications</h3>
+                    <p>Develop robust, scalable web applications that power your business operations. We create
+                        feature-rich platforms with seamless user experiences and powerful backend systems.</p>
+                    <ul style="margin-top: 1rem; color: var(--text-gray); line-height: 2;">
+                        <li>✓ Progressive Web Apps (PWA)</li>
+                        <li>✓ SaaS Platforms</li>
+                        <li>✓ Admin Dashboards & Portals</li>
+                        <li>✓ Real-time Collaboration Tools</li>
+                        <li>✓ Cloud-based Applications</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5: Technology Consultations -->
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h3>Technology Consultations</h3>
+                    <p>Get expert guidance on your technology strategy and digital transformation journey. We help you
+                        make informed decisions about architecture, tools, and best practices for your projects.</p>
+                    <ul style="margin-top: 1rem; color: var(--text-gray); line-height: 2;">
+                        <li>✓ Technology Stack Selection</li>
+                        <li>✓ System Architecture Design</li>
+                        <li>✓ Code Review & Optimization</li>
+                        <li>✓ Digital Transformation Strategy</li>
+                        <li>✓ Technical Training & Mentorship</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6: Maintenance & Support -->
+                <div class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3>Maintenance & Support</h3>
+                    <p>Keep your applications running smoothly with our ongoing maintenance and support services. We
+                        ensure your software stays up-to-date, secure, and performing at its best.</p>
+                    <ul style="margin-top: 1rem; color: var(--text-gray); line-height: 2;">
+                        <li>✓ Bug Fixes & Updates</li>
+                        <li>✓ Performance Monitoring</li>
+                        <li>✓ Security Patches</li>
+                        <li>✓ Feature Enhancements</li>
+                        <li>✓ 24/7 Technical Support</li>
+                    </ul>
+                </div>
+
             </div>
         </div>
+    </section>
 
-        <!-- Contact Info -->
-        <div class="footer-column">
-            <h3>Contact Us</h3>
-            <p>Email: <a href="mailto:info@galaxiescoders.co" style="color: #ccc;">info@galaxiescoders.co</a></p>
-            <p>Phone: 254790352338 / +254753063168</p>
+    <!-- ========================================
+         DEVELOPMENT PROCESS SECTION
+    ======================================== -->
+    <section class="section" style="background: var(--card-bg);">
+        <div class="container">
+            <h2 class="section-title">Our Development Process</h2>
+            <p class="section-subtitle">A proven approach to delivering successful projects</p>
+
+            <div class="cards-grid">
+
+                <!-- Step 1 -->
+                <div class="card">
+                    <div class="card-icon"
+                        style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 2rem;">
+                        01</div>
+                    <h3>Discovery & Planning</h3>
+                    <p>We start by understanding your business goals, target audience, and project requirements.
+                        Together, we define the scope and create a detailed roadmap.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="card">
+                    <div class="card-icon"
+                        style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 2rem;">
+                        02</div>
+                    <h3>Design & Prototyping</h3>
+                    <p>Our design team creates intuitive wireframes and stunning visual designs. We prototype key
+                        features to ensure everything aligns with your vision.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="card">
+                    <div class="card-icon"
+                        style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 2rem;">
+                        03</div>
+                    <h3>Development</h3>
+                    <p>Our developers bring designs to life using agile methodology. We build in sprints, keeping you
+                        updated with regular progress reports and demos.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="card">
+                    <div class="card-icon"
+                        style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 2rem;">
+                        04</div>
+                    <h3>Testing & Quality Assurance</h3>
+                    <p>Rigorous testing ensures your software is bug-free, secure, and performs flawlessly across all
+                        devices and platforms.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="card">
+                    <div class="card-icon"
+                        style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 2rem;">
+                        05</div>
+                    <h3>Deployment & Launch</h3>
+                    <p>We handle the entire deployment process, ensuring a smooth launch with minimal downtime and
+                        maximum impact.</p>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="card">
+                    <div class="card-icon"
+                        style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 2rem;">
+                        06</div>
+                    <h3>Support & Maintenance</h3>
+                    <p>Post-launch, we provide ongoing support, updates, and enhancements to keep your software running
+                        at peak performance.</p>
+                </div>
+
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Footer Bottom -->
-    <div class="footer-bottom">
-        <a href="#" class="up-button">↑</a>
-        &copy; 2025 GalaxiesCoders. All rights reserved.
-    </div>
-</footer>
+    <!-- ========================================
+         WHY CHOOSE OUR SOLUTIONS
+    ======================================== -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Solutions?</h2>
+            <p class="section-subtitle">What sets us apart in software development</p>
 
+            <div class="cards-grid">
+
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Fast Delivery</h3>
+                    <p>We use agile methodologies to deliver projects quickly without compromising quality.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💰</div>
+                    <h3>Cost-Effective</h3>
+                    <p>High-quality solutions at competitive prices. We optimize resources to maximize your ROI.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Custom Approach</h3>
+                    <p>Every solution is tailored to your unique needs. No cookie-cutter templates or generic solutions.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔒</div>
+                    <h3>Security First</h3>
+                    <p>We implement industry-standard security practices to protect your data and users.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <h3>Scalable Architecture</h3>
+                    <p>Built to grow with your business. Our solutions scale effortlessly as your needs expand.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💬</div>
+                    <h3>Clear Communication</h3>
+                    <p>Regular updates, transparent processes, and open communication throughout the project.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CALL TO ACTION SECTION
+    ======================================== -->
+    <section class="section"
+        style="background: linear-gradient(135deg, var(--primary-cyan), var(--primary-blue)); padding: 5rem 0;">
+        <div class="container" style="text-align: center;">
+            <h2 style="font-size: 2.5rem; color: var(--dark-bg); margin-bottom: 1rem;">Ready to Build Your Solution?
+            </h2>
+            <p style="font-size: 1.2rem; color: var(--dark-bg); margin-bottom: 2rem;">Let's discuss your project and
+                create something amazing together.</p>
+            <a href="contact.html" class="cta-button"
+                style="background: var(--dark-bg); color: var(--primary-cyan);">Start Your Project</a>
+            <a href="portfolio.html" class="cta-button cta-button-outline"
+                style="border-color: var(--dark-bg); color: var(--dark-bg);">View Portfolio</a>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <h3>GALAXIES CODERS</h3>
+                    <p style="color: var(--text-gray); margin-bottom: 1rem;">Transforming ideas into powerful digital
+                        solutions. Invent. Innovate. Inspire.</p>
+                    <div class="social-links">
+                        <a href="https://api.whatsapp.com/send/?phone=254790352338&text&type=phone_number&app_absent=0"
+                            title="WhatsApp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCV3EdeD5jeRSp3ATclrMkDw" title="YouTube"
+                            target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@galaxiescorders" title="TikTok" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.instagram.com/galaxiescoders6/" title="Instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://web.facebook.com/profile.php?id=61575680262788&_rdc=1&_rdr" title="Facebook"
+                            target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html">Custom Software</a></li>
+                        <li><a href="services.html">Mobile Development</a></li>
+                        <li><a href="services.html">Websites</a></li>
+                        <li><a href="services.html">Web Applications</a></li>
+                        <li><a href="services.html">Consultations</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li style="color: var(--text-gray);">📍 Nairobi, Kenya</li>
+                        <li style="color: var(--text-gray);">📧 galaxiescoders@gmail.com</li>
+                        <li style="color: var(--text-gray);">📱 +254 739 133 579</li>
+                        <li style="color: var(--text-gray);">🕒 Mon - Fri: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Galaxies Coders. All Rights Reserved. | <a href="#"
+                        style="color: var(--primary-cyan);">Privacy Policy</a> | <a href="#"
+                        style="color: var(--primary-cyan);">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auto-update copyright year script -->
     <script>
-
-        function openModal(id) {
-            document.getElementById(id).style.display = 'block';
-        }
-
-        function closeModal(id) {
-            document.getElementById(id).style.display = 'none';
-        }
-
-       
-        // Toggle the visibility of the dropdown content
-function toggleDropdown(event) {
-    event.preventDefault();
-    const dropdown = event.target.closest('.dropdown');
-    dropdown.classList.toggle('active');
-}
-
-        
-        // Toggle the sidebar on mobile
-function toggleSidebar() {
-    const sidebar = document.getElementById("sidebar");
-    const menuIcon = document.getElementById("menuIcon");
-
-    // Toggle the active class on the sidebar
-    sidebar.classList.toggle("active");
-
-    // Toggle the hamburger and close icon
-    menuIcon.classList.toggle("fa-bars");
-    menuIcon.classList.toggle("fa-times");
-}
-
-// Close the sidebar if the screen size is large enough
-window.addEventListener('resize', function() {
-    if (window.innerWidth > 768) {
-        const sidebar = document.getElementById("sidebar");
-        const menuIcon = document.getElementById("menuIcon");
-        
-        // Remove the 'active' class to hide the sidebar
-        sidebar.classList.remove("active");
-
-        // Reset the menu icon to its hamburger state
-        menuIcon.classList.add("fa-bars");
-        menuIcon.classList.remove("fa-times");
-    }
-});
-        window.onscroll = function() {
-        var header = document.querySelector("header");
-        if (window.scrollY > 0) {  // When scroll position is greater than 0
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-    };
-    
-       //  LATEST 
-
-      // Modal Functionality
-function openModal(serviceId) {
-    const modal = document.getElementById('serviceModal');
-    const modalIcon = document.getElementById('modalIcon');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalBody = document.getElementById('modalBody');
-    
-    // Configure modal content based on service
-    const serviceContent = {
-        webDev: {
-            icon: 'fa-code',
-            title: 'Web Development',
-            content: `
-                <h3>Modern Web Solutions for Your Business</h3>
-                <p>Our web development services create cutting-edge websites that drive results. We combine stunning design with powerful functionality to deliver exceptional user experiences.</p>
-                
-                <h4>Our Web Development Services Include:</h4>
-                <ul>
-                    <li>Custom website design and development</li>
-                    <li>Responsive design for all devices</li>
-                    <li>E-commerce solutions</li>
-                    <li>Progressive Web Applications (PWAs)</li>
-                    <li>Content Management Systems (WordPress, Drupal, etc.)</li>
-                    <li>API development and integration</li>
-                    <li>Website maintenance and support</li>
-                </ul>
-                
-                <h4>Technologies We Use:</h4>
-                <div class="tech-stack">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                    <span>React</span>
-                    <span>Angular</span>
-                    <span>Vue.js</span>
-                    <span>Node.js</span>
-                    <span>PHP</span>
-                </div>
-            `
-        },
-        mobileDev: {
-            icon: 'fa-mobile-alt',
-            title: 'Mobile Development',
-            content: `
-                <h3>High-Performance Mobile Applications</h3>
-                <p>We design and develop custom mobile applications that engage users and deliver exceptional experiences across iOS and Android platforms.</p>
-                
-                <h4>Our Mobile Development Services Include:</h4>
-                <ul>
-                    <li>Native iOS app development</li>
-                    <li>Native Android app development</li>
-                    <li>Cross-platform development (React Native, Flutter)</li>
-                    <li>Mobile UI/UX design</li>
-                    <li>App testing and quality assurance</li>
-                    <li>App store optimization and submission</li>
-                    <li>Ongoing maintenance and updates</li>
-                </ul>
-                
-                <h4>Technologies We Use:</h4>
-                <div class="tech-stack">
-                    <span>Swift</span>
-                    <span>Kotlin</span>
-                    <span>Java</span>
-                    <span>React Native</span>
-                    <span>Flutter</span>
-                    <span>Ionic</span>
-                </div>
-            `
-        },
-        uiux: {
-            icon: 'fa-paint-brush',
-            title: 'UI/UX Design',
-            content: `
-                <h3>Creating Engaging User Experiences</h3>
-                <p>Our UI/UX design services focus on creating intuitive, user-friendly interfaces that enhance user satisfaction and drive conversions.</p>
-                
-                <h4>Our UI/UX Design Services Include:</h4>
-                <ul>
-                    <li>User research and persona development</li>
-                    <li>Information architecture</li>
-                    <li>Wireframing and prototyping</li>
-                    <li>Visual design and branding</li>
-                    <li>Interaction design</li>
-                    <li>Usability testing</li>
-                    <li>Design system creation</li>
-                </ul>
-                
-                <h4>Design Tools We Use:</h4>
-                <div class="tech-stack">
-                    <span>Figma</span>
-                    <span>Adobe XD</span>
-                    <span>Sketch</span>
-                    <span>InVision</span>
-                    <span>Zeplin</span>
-                    <span>Adobe Photoshop</span>
-                    <span>Adobe Illustrator</span>
-                </div>
-            `
-        },
-        webApp: {
-            icon: 'fa-laptop',
-            title: 'Web Applications',
-            content: `
-                <h3>Powerful Web Applications for Your Business</h3>
-                <p>We develop robust, scalable web applications that streamline your business processes and enhance productivity.</p>
-                
-                <h4>Our Web Application Services Include:</h4>
-                <ul>
-                    <li>Custom web application development</li>
-                    <li>Enterprise software solutions</li>
-                    <li>SaaS application development</li>
-                    <li>CRM and ERP systems</li>
-                    <li>Real-time applications</li>
-                    <li>Dashboard and admin panels</li>
-                    <li>Database design and optimization</li>
-                </ul>
-                
-                <h4>Technologies We Use:</h4>
-                <div class="tech-stack">
-                    <span>React.js</span>
-                    <span>Angular</span>
-                    <span>Vue.js</span>
-                    <span>Node.js</span>
-                    <span>Python/Django</span>
-                    <span>Ruby on Rails</span>
-                    <span>GraphQL</span>
-                    <span>RESTful APIs</span>
-                </div>
-            `
-        },
-        dataAnalysis: {
-            icon: 'fa-chart-line',
-            title: 'Data Analysis',
-            content: `
-                <h3>Transform Your Data into Actionable Insights</h3>
-                <p>Our data analysis services help you make informed decisions by extracting valuable insights from your data.</p>
-                
-                <h4>Our Data Analysis Services Include:</h4>
-                <ul>
-                    <li>Data mining and extraction</li>
-                    <li>Statistical analysis</li>
-                    <li>Predictive modeling</li>
-                    <li>Business intelligence dashboards</li>
-                    <li>Data visualization</li>
-                    <li>Reporting and KPI tracking</li>
-                    <li>Big data processing</li>
-                </ul>
-                
-                <h4>Technologies We Use:</h4>
-                <div class="tech-stack">
-                    <span>Python</span>
-                    <span>R</span>
-                    <span>SQL</span>
-                    <span>Power BI</span>
-                    <span>Tableau</span>
-                    <span>TensorFlow</span>
-                    <span>Hadoop</span>
-                    <span>Spark</span>
-                </div>
-            `
-        },
-        cloudComputing: {
-            icon: 'fa-cloud',
-            title: 'Cloud Computing',
-            content: `
-                <h3>Scalable Cloud Solutions for Business Growth</h3>
-                <p>Our cloud computing services help you leverage the power of the cloud to improve efficiency, reduce costs, and scale your business.</p>
-                
-                <h4>Our Cloud Computing Services Include:</h4>
-                <ul>
-                    <li>Cloud migration strategies</li>
-                    <li>Cloud infrastructure setup and management</li>
-                    <li>Serverless architecture implementation</li>
-                    <li>DevOps and CI/CD pipelines</li>
-                    <li>Microservices architecture</li>
-                    <li>Cloud security solutions</li>
-                    <li>Disaster recovery planning</li>
-                </ul>
-                
-                <h4>Cloud Platforms We Work With:</h4>
-                <div class="tech-stack">
-                    <span>AWS</span>
-                    <span>Google Cloud</span>
-                    <span>Microsoft Azure</span>
-                    <span>IBM Cloud</span>
-                    <span>DigitalOcean</span>
-                    <span>Heroku</span>
-                </div>
-            `
-        },
-        aiSolutions: {
-            icon: 'fa-robot',
-            title: 'AI Solutions',
-            content: `
-                <h3>Cutting-Edge AI to Transform Your Business</h3>
-                <p>We integrate artificial intelligence solutions to automate processes, enhance decision-making, and create innovative products and services.</p>
-                
-                <h4>Our AI Solution Services Include:</h4>
-                <ul>
-                    <li>Machine Learning models</li>
-                    <li>Natural Language Processing</li>
-                    <li>Computer Vision applications</li>
-                    <li>Chatbots and virtual assistants</li>
-                    <li>Recommendation systems</li>
-                    <li>Predictive analytics</li>
-                    <li>AI strategy consulting</li>
-                </ul>
-                
-                <h4>Technologies We Use:</h4>
-                <div class="tech-stack">
-                    <span>TensorFlow</span>
-                    <span>PyTorch</span>
-                    <span>Scikit-learn</span>
-                    <span>NLTK</span>
-                    <span>OpenCV</span>
-                    <span>IBM Watson</span>
-                    <span>Google AI</span>
-                </div>
-            `
-        },
-        cybersecurity: {
-            icon: 'fa-shield-alt',
-            title: 'Cybersecurity',
-            content: `
-                <h3>Comprehensive Security for Your Digital Assets</h3>
-                <p>Our cybersecurity services protect your sensitive data and systems from internal and external threats.</p>
-                
-                <h4>Our Cybersecurity Services Include:</h4>
-                <ul>
-                    <li>Security assessments and audits</li>
-                    <li>Penetration testing</li>
-                    <li>Vulnerability management</li>
-                    <li>Security monitoring and incident response</li>
-                    <li>Data encryption solutions</li>
-                    <li>Identity and access management</li>
-                    <li>Employee security awareness training</li>
-                </ul>
-                
-                <h4>Security Technologies We Implement:</h4>
-                <div class="tech-stack">
-                    <span>Firewall</span>
-                    <span>IDS/IPS</span>
-                    <span>SIEM</span>
-                    <span>Encryption</span>
-                    <span>VPN</span>
-                    <span>Two-Factor Authentication</span>
-                    <span>Zero Trust Architecture</span>
-                </div>
-            `
-        }
-    };
-    
-    // Set modal content
-    const service = serviceContent[serviceId];
-    modalIcon.className = `fas ${service.icon} service-icon`;
-    modalTitle.textContent = service.title;
-    modalBody.innerHTML = service.content;
-    
-    // Add additional styling to modal body content
-    const modalStyles = `
-        <style>
-            .modal-body h3 {
-                color: #FFA500;
-                margin-top: 0;
-                margin-bottom: 15px;
-                font-size: 1.4rem;
-            }
-            
-            .modal-body h4 {
-                color: #d0d0f0;
-                margin: 25px 0 10px;
-                font-size: 1.1rem;
-            }
-            
-            .modal-body p {
-                color: #a0a0c0;
-                line-height: 1.6;
-                margin-bottom: 20px;
-            }
-            
-            .modal-body ul {
-                padding-left: 20px;
-                margin-bottom: 20px;
-            }
-            
-            .modal-body li {
-                color: #b0b0d0;
-                margin-bottom: 8px;
-                position: relative;
-                list-style-type: none;
-                padding-left: 20px;
-            }
-            
-            .modal-body li:before {
-                content: '\\f00c';
-                font-family: 'Font Awesome 5 Free';
-                font-weight: 900;
-                color: #FFA500;
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-            
-            .tech-stack {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                margin-top: 15px;
-            }
-            
-            .tech-stack span {
-                background-color: rgba(255, 165, 0, 0.1);
-                color: #FFA500;
-                padding: 6px 12px;
-                border-radius: 15px;
-                font-size: 0.8rem;
-                border: 1px solid rgba(255, 165, 0, 0.3);
-            }
-        </style>
-    `;
-    
-    // Append styles to modal body
-    modalBody.innerHTML += modalStyles;
-    
-    // Display the modal
-    modal.style.display = 'flex';
-    
-    // Close modal when clicking on the close button
-    document.querySelector('.close-modal').onclick = function() {
-        modal.style.display = 'none';
-    };
-    
-    // Close modal when clicking outside of it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
-    };
-}
-
-// Add animated background effects
-document.addEventListener('DOMContentLoaded', function() {
-    const servicesSection = document.querySelector('.services-section');
-    
-    // Create particle background
-    for (let i = 0; i < 15; i++) {
-        let particle = document.createElement('div');
-        particle.className = 'particle';
-        
-        // Random size between 2-8px
-        const size = Math.random() * 6 + 2;
-        
-        // Position randomly
-        const posX = Math.random() * 100;
-        const posY = Math.random() * 100;
-        
-        // Animation duration between 15-40s
-        const duration = Math.random() * 25 + 15;
-        
-        // Apply styles
-        particle.style.width = `${size}px`;
-        particle.style.height = `${size}px`;
-        particle.style.left = `${posX}%`;
-        particle.style.top = `${posY}%`;
-        particle.style.animationDuration = `${duration}s`;
-        particle.style.opacity = Math.random() * 0.5 + 0.1;
-        
-        servicesSection.appendChild(particle);
-    }
-});
-
-// Add this CSS for particles
-document.addEventListener('DOMContentLoaded', function() {
-    const style = document.createElement('style');
-    style.innerHTML = `
-        .particle {
-            position: absolute;
-            background-color: rgba(255, 165, 0, 0.3);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 0;
-            animation: float linear infinite;
-        }
-        
-        @keyframes float {
-            0% {
-                transform: translate(0, 0) rotate(0deg);
-                opacity: 0.1;
-            }
-            25% {
-                opacity: 0.3;
-            }
-            50% {
-                transform: translate(70px, -30px) rotate(180deg);
-                opacity: 0.1;
-            }
-            75% {
-                opacity: 0.3;
-            }
-            100% {
-                transform: translate(0, 0) rotate(360deg);
-                opacity: 0.1;
-            }
-        }
-    `;
-    document.head.appendChild(style);
-});
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
+
 </body>
+
 </html>
